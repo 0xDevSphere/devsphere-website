@@ -1,6 +1,6 @@
 "use client";
-import { ChevronsDown, Github, Menu } from "lucide-react";
-import DevSphereLogo from "@/public/devsphereLogo.png";
+import { Github, Menu } from "lucide-react";
+import devsphereLogo from "@/public/devsphereLogo.png";
 import React from "react";
 import {
   Sheet,
@@ -74,8 +74,17 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
-      <Link href="/" className="font-bold text-lg flex justify-center items-center">
-        <Image src={DevSphereLogo} alt="" width={30} height={30} className="pl-1" />
+      <Link
+        href="/"
+        className="font-bold text-lg flex justify-center items-center"
+      >
+        <Image
+          src={devsphereLogo}
+          alt=""
+          width={30}
+          height={30}
+          className="pl-1"
+        />
         <h3 className="text-xl pl-2">DevSphere</h3>
       </Link>
       {/* <!-- Mobile --> */}
@@ -96,8 +105,16 @@ export const Navbar = () => {
               <SheetHeader className="mb-4 ml-4">
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
-                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-                    Shadcn
+                    {/* <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" /> */}
+                    <Image
+                      src={devsphereLogo}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="pl-1"
+                    />
+                    <div className="p-1"></div>
+                    DevSphere
                   </Link>
                 </SheetTitle>
               </SheetHeader>
