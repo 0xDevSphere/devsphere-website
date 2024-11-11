@@ -1,4 +1,4 @@
-import MicrosoftLogo from "@/public/microsoft-logo-svgrepo-com.svg";
+import MicrosoftLogo from "@/public/Microsoft-Logo-White.webp";
 import Image from "next/image";
 
 export default function MicrosoftIcon() {
@@ -8,7 +8,7 @@ export default function MicrosoftIcon() {
             alt="Microsoft Logo"
             style={{
                 width: "auto",
-                height: "8rem",
+                height: "4rem",
             }}
         />
     );
