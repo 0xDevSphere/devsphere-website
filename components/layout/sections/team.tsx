@@ -41,18 +41,7 @@ export const TeamSection = () => {
             lastName: "Singh",
             positions: ["Faculty Co-ordinator"],
             socialNetworks: [
-                {
-                    name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
-                },
-                {
-                    name: "Github",
-                    url: "https://github.com/leoMirandaa",
-                },
-                {
-                    name: "X",
-                    url: "https://x.com/leo_mirand4",
-                },
+                // Add socials once consent is given
             ],
         },
         {
@@ -63,15 +52,15 @@ export const TeamSection = () => {
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
+                    url: "https://www.linkedin.com/in/taufeeq/",
                 },
                 {
                     name: "Github",
-                    url: "https://github.com/leoMirandaa",
+                    url: "https://github.com/0xtaufeeq",
                 },
                 {
                     name: "X",
-                    url: "https://x.com/leo_mirand4",
+                    url: "https://x.com/0xtaufeeq",
                 },
             ],
         },
@@ -83,11 +72,11 @@ export const TeamSection = () => {
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
+                    url: "https://www.linkedin.com/in/kautilyadk/",
                 },
                 {
                     name: "Github",
-                    url: "https://github.com/leoMirandaa",
+                    url: "https://github.com/kautilyadevaraj",
                 },
             ],
         },
@@ -99,15 +88,15 @@ export const TeamSection = () => {
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
+                    url: "https://www.linkedin.com/in/pushant/",
                 },
                 {
                     name: "Github",
-                    url: "https://github.com/leoMirandaa",
+                    url: "https://github.com/pushan2005",
                 },
                 {
                     name: "X",
-                    url: "https://x.com/leo_mirand4",
+                    url: "https://x.com/broken_nokia",
                 },
             ],
         },
@@ -119,7 +108,11 @@ export const TeamSection = () => {
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
+                    url: "https://www.linkedin.com/in/soumik7/",
+                },
+                {
+                    name: "X",
+                    url: "https://x.com/emSoumik",
                 },
             ],
         },
@@ -131,11 +124,11 @@ export const TeamSection = () => {
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
+                    url: "https://www.linkedin.com/in/sagar-n-rao-1a883b2ab/",
                 },
                 {
                     name: "Github",
-                    url: "https://github.com/leoMirandaa",
+                    url: "https://github.com/SagarNRao/",
                 },
             ],
         },
@@ -147,15 +140,7 @@ export const TeamSection = () => {
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
-                },
-                {
-                    name: "Github",
-                    url: "https://github.com/leoMirandaa",
-                },
-                {
-                    name: "X",
-                    url: "https://x.com/leo_mirand4",
+                    url: "https://www.linkedin.com/in/yashmeet-baid-2b269127a/",
                 },
             ],
         },
@@ -165,10 +150,7 @@ export const TeamSection = () => {
             lastName: "Swarup K",
             positions: ["Community Manager"],
             socialNetworks: [
-                {
-                    name: "X",
-                    url: "https://x.com/leo_mirand4",
-                },
+                // Add socials if applicable
             ],
         },
         {
@@ -179,15 +161,7 @@ export const TeamSection = () => {
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
-                },
-                {
-                    name: "Github",
-                    url: "https://github.com/leoMirandaa",
-                },
-                {
-                    name: "X",
-                    url: "https://x.com/leo_mirand4",
+                    url: "https://www.linkedin.com/in/sharuhampali/",
                 },
             ],
         },
@@ -197,18 +171,7 @@ export const TeamSection = () => {
             lastName: "Reddy",
             positions: ["Media Head"],
             socialNetworks: [
-                {
-                    name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
-                },
-                {
-                    name: "Github",
-                    url: "https://github.com/leoMirandaa",
-                },
-                {
-                    name: "X",
-                    url: "https://x.com/leo_mirand4",
-                },
+                // Add socials if applicable
             ],
         },
         {
@@ -219,15 +182,7 @@ export const TeamSection = () => {
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
-                },
-                {
-                    name: "Github",
-                    url: "https://github.com/leoMirandaa",
-                },
-                {
-                    name: "X",
-                    url: "https://x.com/leo_mirand4",
+                    url: "https://www.linkedin.com/in/shreyas-abiram-a52417290/",
                 },
             ],
         },
@@ -237,18 +192,7 @@ export const TeamSection = () => {
             lastName: "Sushant Harsha",
             positions: ["Content Writer"],
             socialNetworks: [
-                {
-                    name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/leopoldo-miranda/",
-                },
-                {
-                    name: "Github",
-                    url: "https://github.com/leoMirandaa",
-                },
-                {
-                    name: "X",
-                    url: "https://x.com/leo_mirand4",
-                },
+                // Add socials if applicable
             ],
         },
     ];
