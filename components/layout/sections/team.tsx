@@ -11,6 +11,9 @@ import SamarthImage from "@/public/Samarth.jpg";
 import SharuImage from "@/public/sharu.jpg";
 import HarshaImage from "@/public/harsha.jpg";
 import DaiwikImage from "@/public/daiwik.jpg";
+import ShreyasImage from "@/public/shreyas.jpg";
+import SoumikImage from "@/public/soumik.jpg";
+
 import { StaticImageData } from "next/image";
 import { SiInstagram } from "react-icons/si";
 
@@ -103,10 +106,14 @@ export const TeamSection = () => {
                     name: "X",
                     url: "https://x.com/broken_nokia",
                 },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/pushan_fillertext/",
+                },
             ],
         },
         {
-            imageUrl: DefaultIcon,
+            imageUrl: SoumikImage,
             firstName: "Soumik",
             lastName: "Halder",
             positions: ["Growth and Partnerships"],
@@ -171,7 +178,14 @@ export const TeamSection = () => {
             lastName: "Swarup K",
             positions: ["Community Manager"],
             socialNetworks: [
-                // Add socials if applicable
+                {
+                    name: "Github",
+                    url: "https://github.com/SamarthSK2005",
+                },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/mr.shmix",
+                },
             ],
         },
         {
@@ -204,7 +218,7 @@ export const TeamSection = () => {
             ],
         },
         {
-            imageUrl: DefaultIcon,
+            imageUrl: ShreyasImage,
             firstName: "Shreyas",
             lastName: "Abiram",
             positions: ["Cinematographer"],
