@@ -12,6 +12,7 @@ import SharuImage from "@/public/sharu.jpg";
 import HarshaImage from "@/public/harsha.jpg";
 import DaiwikImage from "@/public/daiwik.jpg";
 import { StaticImageData } from "next/image";
+import { SiInstagram } from "react-icons/si";
 
 import {
     Card,
@@ -62,6 +63,10 @@ export const TeamSection = () => {
                     name: "X",
                     url: "https://x.com/0xtaufeeq",
                 },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/0xtaufeeq/",
+                },
             ],
         },
         {
@@ -111,6 +116,10 @@ export const TeamSection = () => {
                     url: "https://www.linkedin.com/in/soumik7/",
                 },
                 {
+                    name: "Github",
+                    url: "https://github.com/emSoumik",
+                },
+                {
                     name: "X",
                     url: "https://x.com/emSoumik",
                 },
@@ -130,6 +139,10 @@ export const TeamSection = () => {
                     name: "Github",
                     url: "https://github.com/SagarNRao/",
                 },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/sagar_n_rao_man/",
+                },
             ],
         },
         {
@@ -141,6 +154,14 @@ export const TeamSection = () => {
                 {
                     name: "LinkedIn",
                     url: "https://www.linkedin.com/in/yashmeet-baid-2b269127a/",
+                },
+                {
+                    name: "Github",
+                    url: "https://github.com/yashmeetbaid",
+                },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/yashmeetbaid/",
                 },
             ],
         },
@@ -163,6 +184,14 @@ export const TeamSection = () => {
                     name: "LinkedIn",
                     url: "https://www.linkedin.com/in/sharuhampali/",
                 },
+                {
+                    name: "Github",
+                    url: "https://github.com/Sharuhampali",
+                },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/sharu_hampali",
+                },
             ],
         },
         {
@@ -184,6 +213,18 @@ export const TeamSection = () => {
                     name: "LinkedIn",
                     url: "https://www.linkedin.com/in/shreyas-abiram-a52417290/",
                 },
+                {
+                    name: "Github",
+                    url: "https://github.com/Shreyas-Abiram",
+                },
+                {
+                    name: "X",
+                    url: "https://x.com/Shreyas02666427",
+                },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/theguywho_films/",
+                },
             ],
         },
         {
@@ -204,6 +245,8 @@ export const TeamSection = () => {
                 return <GithubIcon />;
             case "X":
                 return <XIcon />;
+            case "Instagram":
+                return <SiInstagram />;
         }
     };
 
