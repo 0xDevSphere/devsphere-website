@@ -13,6 +13,7 @@ import HarshaImage from "@/public/harsha.jpg";
 import DaiwikImage from "@/public/daiwik.jpg";
 import ShreyasImage from "@/public/shreyas.jpg";
 import SoumikImage from "@/public/soumik.jpg";
+import ProfNikithaImage from "@/public/profnikitha.jpg";
 
 import { StaticImageData } from "next/image";
 import { SiInstagram } from "react-icons/si";
@@ -40,12 +41,15 @@ interface SocialNetworkProps {
 export const TeamSection = () => {
     const teamList: TeamProps[] = [
         {
-            imageUrl: DefaultIcon,
+            imageUrl: ProfNikithaImage,
             firstName: "Dr.Nikita",
             lastName: "Singh",
             positions: ["Faculty Co-ordinator"],
             socialNetworks: [
-                // Add socials once consent is given
+                {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/nikitas14/",
+                },
             ],
         },
         {
@@ -218,7 +222,14 @@ export const TeamSection = () => {
             lastName: "Reddy",
             positions: ["Media Head"],
             socialNetworks: [
-                // Add socials if applicable
+                {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/daiwik-reddy-384909283",
+                },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/daiwik_reddy",
+                },
             ],
         },
         {
@@ -251,7 +262,18 @@ export const TeamSection = () => {
             lastName: "Sushant Harsha",
             positions: ["Content Writer"],
             socialNetworks: [
-                // Add socials if applicable
+                {
+                    name: "LinkedIn",
+                    url: "http://linkedin.com/in/sushanth-harsha-9344a0220",
+                },
+                {
+                    name: "Github",
+                    url: "https://github.com/SushanthHarsha/",
+                },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/_agnivarcas/",
+                },
             ],
         },
     ];
