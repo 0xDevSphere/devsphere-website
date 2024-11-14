@@ -86,6 +86,10 @@ export const TeamSection = () => {
                     name: "Github",
                     url: "https://github.com/kautilyadevaraj",
                 },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/kautilyadevraj/",
+                },
             ],
         },
         {
