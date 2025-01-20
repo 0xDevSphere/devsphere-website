@@ -181,22 +181,6 @@ export const TeamSection = () => {
             ],
         },
         {
-            imageUrl: SamarthImage,
-            firstName: "Samarth",
-            lastName: "Swarup K",
-            positions: ["Community Manager"],
-            socialNetworks: [
-                {
-                    name: "Github",
-                    url: "https://github.com/SamarthSK2005",
-                },
-                {
-                    name: "Instagram",
-                    url: "https://www.instagram.com/mr.shmix",
-                },
-            ],
-        },
-        {
             imageUrl: SharuImage,
             firstName: "Sharu G",
             lastName: "Hampali",

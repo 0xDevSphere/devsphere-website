@@ -186,7 +186,7 @@ export const Navbar = () => {
                             <NavigationMenuLink key={href} asChild>
                                 <Link
                                     href={href}
-                                    className={`text-base px-4 ${label === 'Events' ? 'text-primary' : ''}`}
+                                    className="text-base px-4"
                                 >
                                     {label}
                                 </Link>
