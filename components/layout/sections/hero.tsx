@@ -16,7 +16,7 @@ export const HeroSection = () => {
             <span className="mr-2 text-primary">
               <Badge>✨</Badge>
             </span>
-            <span> Registrations Now Open!</span>
+            <span>DA Program is now live!</span>
           </Badge>
 
           <div className="max-w-screen-lg mx-auto text-center text-3xl md:text-6xl font-bold leading-relaxed">
@@ -49,11 +49,9 @@ export const HeroSection = () => {
               variant="secondary"
               className="w-5/6 md:w-1/4 font-bold"
             >
-              <Link
-                href="https://github.com/orgs/0xDevSphere/repositories"
-                target="_blank"
-              >
-                Explore Projects
+              <Link href="./DAProgram">
+                Be an Apprentice
+                <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </div>
