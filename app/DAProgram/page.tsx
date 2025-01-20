@@ -1,9 +1,18 @@
 import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
 export default function DAProgramPage() {
   return (
     <div className="grid w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl gap-4 mx-auto py-20 md:py-20">
-      <h1 className="text-3xl text-primary font-bold">
+      <h1 className="text-3xl text-primary font-bold flex items-center justify-between flex-wrap">
         DevSphere Apprenticeship Program
+        <a href="https://forms.gle/u2JFnjvTk5BX2Ve3A" target="_blank">
+          <Badge className="text-sm flex py-2 md:mt-0 mt-2 items-start">
+            <span className="mr-2">
+              <Badge className="bg-black">✨</Badge>
+            </span>
+            <span className="hover:underline">Apply now!</span>
+          </Badge>
+        </a>
       </h1>
       <p>
         The DevSphere Apprenticeship Program is where you get to shine, learn,
@@ -153,12 +162,28 @@ export default function DAProgramPage() {
       </p>
       <Separator />
       <h2 className="text-xl text-primary font-bold">How to Apply?</h2>
-      <p>
-        Fill out our{" "}
-        <a href="#" className="font-bold underline">
-          Apprentice Recruitment Form.
-        </a>
-      </p>
+      <div className="ml-4">
+        <ul className="list-disc space-y-1.5">
+          <li>
+            Fill out our{" "}
+            <a
+              href="https://forms.gle/u2JFnjvTk5BX2Ve3A"
+              target="_blank"
+              className="font-bold underline"
+            >
+              Apprentice Recruitment Form.
+            </a>
+          </li>
+          <li>
+            Share your skills, past work, and what excites you about being an
+            apprentice.
+          </li>
+          <li>
+            If selected, get ready for one-on-one mentorship and tasks that make
+            an impact.
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
