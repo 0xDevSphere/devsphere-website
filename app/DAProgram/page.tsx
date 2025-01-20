@@ -21,7 +21,7 @@ export default function DAProgramPage() {
       <Separator />
       <p>
         Members of DevSphere can apply to become an apprentice, and if selected,
-        you'll get -
+        you&apos;ll get -
       </p>
       <div className="ml-4">
         <ul className="list-disc space-y-1.5">
@@ -57,15 +57,15 @@ export default function DAProgramPage() {
             <p className="font-bold pb-2">
               Step 2: Apply to Be a DevSphere Apprentice
             </p>
-            Once you're in, you can apply to the DevSphere Apprenticeship
+            Once you&apos;re in, you can apply to the DevSphere Apprenticeship
             Program. Apprentices get access to personalized mentorship and work
             on impactful projects.
           </li>
           <li>
             <p className="font-bold pb-2">Step 3: Become a Core Member</p>
-            After being an apprentice for more than 3 months, you'll be eligible
-            to apply for a core member role. This is your chance to lead,
-            mentor, and shape the future of DevSphere.
+            After being an apprentice for more than 3 months, you&apos;ll be
+            eligible to apply for a core member role. This is your chance to
+            lead, mentor, and shape the future of DevSphere.
           </li>
         </ul>
       </div>
@@ -77,8 +77,8 @@ export default function DAProgramPage() {
         <ol className="list-decimal space-y-1.5">
           <li>
             <p className="font-bold pb-2">Personalized Mentorship</p>Work
-            closely with DevSphere core members who'll guide and support you
-            every step of the way.
+            closely with DevSphere core members who&apos;ll guide and support
+            you every step of the way.
           </li>
           <li>
             <p className="font-bold pb-2">Task-Based Contributions</p>Take on
@@ -87,8 +87,8 @@ export default function DAProgramPage() {
           </li>
           <li>
             <p className="font-bold pb-2">Leaderboards and Recognition</p>Top
-            point holders are featured on our socials every month. It's your
-            time to shine and inspire others.
+            point holders are featured on our socials every month. It&apos;s
+            your time to shine and inspire others.
           </li>
           <li>
             <p className="font-bold pb-2">Path to Leadership</p>Stick with us
@@ -145,7 +145,7 @@ export default function DAProgramPage() {
           </li>
           <li>
             <p className="font-bold pb-2">Lead by Example</p>As an apprentice,
-            you're setting the standard for others in the club. Bring your
+            you&apos;re setting the standard for others in the club. Bring your
             A-game.
           </li>
         </ol>
@@ -155,10 +155,10 @@ export default function DAProgramPage() {
         Why Join the DevSphere Apprenticeship Program?
       </h2>
       <p>
-        It's a platform for growth, creativity, and leadership. From
+        It&apos;s a platform for growth, creativity, and leadership. From
         personalized mentorship to public recognition, the Apprentice Program is
-        where you build not just skills, but a reputation. It's your gateway to
-        becoming a core member and shaping the future of DevSphere.
+        where you build not just skills, but a reputation. It&apos;s your
+        gateway to becoming a core member and shaping the future of DevSphere.
       </p>
       <Separator />
       <h2 className="text-xl text-primary font-bold">How to Apply?</h2>
