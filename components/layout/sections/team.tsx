@@ -10,7 +10,7 @@ import PuniImage from "@/public/puneetha.jpeg";
 import SamarthImage from "@/public/Samarth.jpg";
 import JathinImage from "@/public/jathin.png";
 import KautilyaImage from "@/public/Kautilya_.jpg";
-import lalithImage from "@/public/lalith.png";
+import LalithImage from "@/public/lalith.png";
 import TaufeeqImage from "@/public/taufeeq.jpeg";
 
 import MerinThomasImage from "@/public/ProfMerin.png";
@@ -93,7 +93,7 @@ export const TeamSection = () => {
             imageUrl: PushanImage,
             firstName: "Pushan",
             lastName: "T",
-            positions: ["Tech Lead"],
+            positions: ["Founder & Tech Lead"],
             socialNetworks: [
                 {
                     name: "LinkedIn",
@@ -175,7 +175,7 @@ export const TeamSection = () => {
             ],
         },
         {
-            imageUrl: lalithImage,
+            imageUrl: LalithImage,
             firstName: "B.Lalith",
             lastName: "Aditya",
             positions: ["Media - Cinematography lead"],
@@ -215,7 +215,7 @@ export const TeamSection = () => {
             imageUrl: KautilyaImage,
             firstName: "Kautilya",
             lastName: "DK",
-            positions: ["Founder & Advisor"],
+            positions: ["Advisor"],
             socialNetworks: [
                 {
                     name: "LinkedIn",
