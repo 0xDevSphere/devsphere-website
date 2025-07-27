@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-const inter = JetBrains_Mono({ subsets: ["latin"] });
+const inter = GeistSans;
 
 export const metadata: Metadata = {
     title: "DevSphere",
