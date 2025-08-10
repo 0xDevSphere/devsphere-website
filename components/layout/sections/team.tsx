@@ -3,15 +3,15 @@ import LinkedInIcon from "@/components/icons/linkedin-icon";
 import XIcon from "@/components/icons/x-icon";
 import DefaultIcon from "@/public/default.jpeg";
 import RitamImage from "@/public/ritam.jpg";
-import SamImage from "@/public/sam.jpg";
+import SamarthImage from "@/public/sam.jpg";
 import PushanImage from "@/public/Pushan.jpg";
 import SagarImage from "@/public/Sagar.jpg";
 import PuniImage from "@/public/puneetha.jpeg";
-import SamarthImage from "@/public/Samarth.jpg";
 import JathinImage from "@/public/jathin.png";
 import KautilyaImage from "@/public/Kautilya_.jpg";
 import LalithImage from "@/public/lalith.png";
 import TaufeeqImage from "@/public/taufeeq.jpeg";
+import SharadhImage from "@/public/san.png"; 
 
 import MerinThomasImage from "@/public/ProfMerin.png";
 
@@ -73,7 +73,7 @@ export const TeamSection = () => {
             ],
         },
         {
-            imageUrl: SamImage,
+            imageUrl: SamarthImage,
             firstName: "Samarth",
             lastName: "Kadam",
             positions: ["Vice President"],
@@ -90,27 +90,21 @@ export const TeamSection = () => {
             ],
         },
         {
-            imageUrl: PushanImage,
-            firstName: "Pushan",
-            lastName: "T",
-            positions: ["Founder & Tech Lead"],
+            imageUrl: SharadhImage,
+            firstName: "Sharadh",
+            lastName: "Naidu",
+            positions: ["Tech Lead"],
             socialNetworks: [
                 {
                     name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/pushant/",
+                    url: "https://www.linkedin.com/in/sharadh-naidu-72259a32b/",
                 },
                 {
                     name: "Github",
-                    url: "https://github.com/pushan2005",
+                    url: "https://github.com/SharadhNaidu",
                 },
-                {
-                    name: "X",
-                    url: "https://x.com/broken_nokia",
-                },
-                {
-                    name: "Instagram",
-                    url: "https://www.instagram.com/pushan_fillertext/",
-                },
+                
+        
             ],
         },
         
@@ -228,6 +222,30 @@ export const TeamSection = () => {
                 {
                     name: "Instagram",
                     url: "https://www.instagram.com/kautilyadevraj/",
+                },
+            ],
+        },
+        {
+            imageUrl: PushanImage,
+            firstName: "Pushan",
+            lastName: "T",
+            positions: ["Founder & Tech Lead"],
+            socialNetworks: [
+                {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/pushant/",
+                },
+                {
+                    name: "Github",
+                    url: "https://github.com/pushan2005",
+                },
+                {
+                    name: "X",
+                    url: "https://x.com/broken_nokia",
+                },
+                {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/pushan_fillertext/",
                 },
             ],
         },
