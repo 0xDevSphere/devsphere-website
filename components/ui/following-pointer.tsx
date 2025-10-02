@@ -18,6 +18,7 @@ export const FollowerPointerCard = ({
   const ref = React.useRef<HTMLDivElement>(null)
   const [rect, setRect] = useState<DOMRect | null>(null)
   const [isInside, setIsInside] = useState<boolean>(false)
+  const [enablePointer, setEnablePointer] = useState<boolean>(false)
 
   
 
@@ -42,6 +43,18 @@ export const FollowerPointerCard = ({
     }
   }, [])
 
+  // Enable custom cursor only on non-touch and medium+ screens
+  useEffect(() => {
+    const updatePointer = () => {
+      const isCoarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches
+      const isSmallViewport = window.innerWidth < 768
+      setEnablePointer(!isCoarse && !isSmallViewport)
+    }
+    updatePointer()
+    window.addEventListener("resize", updatePointer)
+    return () => window.removeEventListener("resize", updatePointer)
+  }, [])
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     x.set(e.clientX)
     y.set(e.clientY)
@@ -57,16 +70,16 @@ export const FollowerPointerCard = ({
 
   return (
     <div
-      onMouseLeave={handleMouseLeave}
-      onMouseEnter={handleMouseEnter}
-      onMouseMove={handleMouseMove}
+      onMouseLeave={enablePointer ? handleMouseLeave : undefined}
+      onMouseEnter={enablePointer ? handleMouseEnter : undefined}
+      onMouseMove={enablePointer ? handleMouseMove : undefined}
       style={{
-        cursor: "none",
+        cursor: enablePointer ? "none" : "auto",
       }}
       ref={ref}
       className={cn("relative", className)}
     >
-      <AnimatePresence>{isInside && <FollowPointer x={x} y={y} title={title} />}</AnimatePresence>
+      <AnimatePresence>{enablePointer && isInside && <FollowPointer x={x} y={y} title={title} />}</AnimatePresence>
       {children}
     </div>
   )
