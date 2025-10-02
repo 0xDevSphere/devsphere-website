@@ -12,6 +12,9 @@ import KautilyaImage from "@/public/Kautilya_.jpg";
 import LalithImage from "@/public/lalith.png";
 import TaufeeqImage from "@/public/taufeeq.jpeg";
 import SharadhImage from "@/public/san.png"; 
+import NakshImage from "@/public/naksh.jpg";
+import AkarshImage from "@/public/akarsh.jpg";
+import ShreeshaImage from "@/public/shreesha.jpg";
 
 import MerinThomasImage from "@/public/ProfMerin.png";
 
@@ -179,6 +182,54 @@ export const TeamSection = () => {
                     url: "https://www.linkedin.com/in/lalith-aditya-b-0a99b3312/",
                 },
             
+            ],
+        },
+        {
+            imageUrl: NakshImage,
+            firstName: "Naksh",
+            lastName: "Prajapati",
+            positions: ["Public Relations"],
+            socialNetworks: [
+                {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/thenakshprajapat/",
+                },
+                {
+                    name: "Github",
+                    url: "https://github.com/",
+                },
+            ],
+        },
+        {
+            imageUrl: AkarshImage,
+            firstName: "Akarsh",
+            lastName: "Raja",
+            positions: ["Tech"],
+            socialNetworks: [
+                {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/akarshraja",
+                },
+                {
+                    name: "Github",
+                    url: "https://github.com/thatjar",
+                },
+            ],
+        },
+        {
+            imageUrl: ShreeshaImage,
+            firstName: "Shreesha",
+            lastName: " ",
+            positions: ["Tech"],
+            socialNetworks: [
+                {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/",
+                },
+                {
+                    name: "Github",
+                    url: "https://github.com/",
+                },
             ],
         },
         {
