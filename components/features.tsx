@@ -15,19 +15,26 @@ import ReactMarkdown from "react-markdown"
 import Image from "next/image"
 
 export default function Features() {
-  // Section title in-view
+  
   const sectionRef = useRef(null)
-  const isSectionInView = useInView(sectionRef, { once: true, amount: 0.1, margin: "200px 0px 200px 0px" })
+  const isSectionInView = useInView(sectionRef, { once: true, amount: 0.05, margin: "400px 0px 400px 0px" })
 
-  // Per-card in-view observers (improves mobile perf by deferring heavy content)
+  
   const cliRef = useRef(null)
-  const isCliInView = useInView(cliRef, { once: true, amount: 0.05, margin: "250px 0px 250px 0px" })
+  const isCliInView = useInView(cliRef, { once: true, amount: 0.01, margin: "500px 0px 500px 0px" })
   const globalRef = useRef(null)
-  const isGlobalInView = useInView(globalRef, { once: true, amount: 0.05, margin: "250px 0px 250px 0px" })
+  const isGlobalInView = useInView(globalRef, { once: true, amount: 0.01, margin: "500px 0px 500px 0px" })
   const feature3Ref = useRef(null)
-  const isFeature3InView = useInView(feature3Ref, { once: true, amount: 0.05, margin: "250px 0px 250px 0px" })
+  const isFeature3InView = useInView(feature3Ref, { once: true, amount: 0.01, margin: "500px 0px 500px 0px" })
   const feature4Ref = useRef(null)
-  const isFeature4InView = useInView(feature4Ref, { once: true, amount: 0.05, margin: "250px 0px 250px 0px" })
+  const isFeature4InView = useInView(feature4Ref, { once: true, amount: 0.01, margin: "500px 0px 500px 0px" })
+
+  
+  const [shouldPreloadFirst, setShouldPreloadFirst] = useState(false)
+  useEffect(() => {
+    const timer = setTimeout(() => setShouldPreloadFirst(true), 100)
+    return () => clearTimeout(timer)
+  }, [])
   const { theme } = useTheme()
   const [isHovering, setIsHovering] = useState(false)
   const [isCliHovering, setIsCliHovering] = useState(false)
@@ -144,13 +151,13 @@ export default function Features() {
                     style={{ borderRadius: "20px" }}
                   >
                     {/* Background Image */}
-                    {isCliInView && (
+                    {(isCliInView || shouldPreloadFirst) && (
                       <div className="absolute inset-0">
                         <Image
                           src="https://framerusercontent.com/images/UjqUIiBHmIcSH9vos9HlG2BF4bo.png"
                           alt="Arrow-CoreExchange"
                           fill
-                          priority={false}
+                          priority={shouldPreloadFirst}
                           sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 800px"
                           className="object-cover rounded-xl"
                         />
@@ -158,7 +165,7 @@ export default function Features() {
                     )}
 
                     {/* Animated SVG Connecting Lines */}
-                    {isCliInView && (
+                    {(isCliInView || shouldPreloadFirst) && (
                       <motion.div
                       className="absolute inset-0 flex items-center justify-center"
                       initial={{ opacity: 0 }}
@@ -198,7 +205,7 @@ export default function Features() {
                     )}
 
                     {/* Animated Purple Blur Effect */}
-                    {isCliInView && (
+                    {(isCliInView || shouldPreloadFirst) && (
                       <motion.div
                       className="absolute top-1/2 left-1/2 w-16 h-16 bg-purple-500 rounded-full blur-[74px] opacity-65 transform -translate-x-1/2 -translate-y-1/2"
                       initial={{ scale: 1 }}
@@ -284,7 +291,7 @@ export default function Features() {
                     </div>
 
                     {/* Animated Circular Border */}
-                    {isCliInView && (
+                    {(isCliInView || shouldPreloadFirst) && (
                       <motion.div
                       className="absolute inset-0 flex items-center justify-center"
                       initial={{ opacity: 0 }}
