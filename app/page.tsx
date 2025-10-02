@@ -2,7 +2,17 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Hero from "@/components/home/hero"
-import Features from "@/components/features"
+import dynamic from "next/dynamic"
+const Features = dynamic(() => import("@/components/features"), {
+  ssr: false,
+  loading: () => (
+    <section className="relative py-12 sm:py-24 md:py-32">
+      <div className="container mx-auto">
+        <div className="h-72 w-full rounded-2xl border border-border/40 bg-background/40 animate-pulse" />
+      </div>
+    </section>
+  ),
+})
 import { TestimonialsSection } from "@/components/testimonials"
 import { NewReleasePromo } from "@/components/new-release-promo"
 import { FAQSection } from "@/components/faq-section"
