@@ -15,8 +15,26 @@ import ReactMarkdown from "react-markdown"
 import Image from "next/image"
 
 export default function Features() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  
+  const sectionRef = useRef(null)
+  const isSectionInView = useInView(sectionRef, { once: true, amount: 0.05, margin: "400px 0px 400px 0px" })
+
+  
+  const cliRef = useRef(null)
+  const isCliInView = useInView(cliRef, { once: true, amount: 0.01, margin: "500px 0px 500px 0px" })
+  const globalRef = useRef(null)
+  const isGlobalInView = useInView(globalRef, { once: true, amount: 0.01, margin: "500px 0px 500px 0px" })
+  const feature3Ref = useRef(null)
+  const isFeature3InView = useInView(feature3Ref, { once: true, amount: 0.01, margin: "500px 0px 500px 0px" })
+  const feature4Ref = useRef(null)
+  const isFeature4InView = useInView(feature4Ref, { once: true, amount: 0.01, margin: "500px 0px 500px 0px" })
+
+  
+  const [shouldPreloadFirst, setShouldPreloadFirst] = useState(false)
+  useEffect(() => {
+    const timer = setTimeout(() => setShouldPreloadFirst(true), 100)
+    return () => clearTimeout(timer)
+  }, [])
   const { theme } = useTheme()
   const [isHovering, setIsHovering] = useState(false)
   const [isCliHovering, setIsCliHovering] = useState(false)
@@ -83,9 +101,9 @@ export default function Features() {
       <div className="bg-primary absolute -top-10 left-1/2 h-16 w-44 -translate-x-1/2 rounded-full opacity-40 blur-3xl select-none"></div>
       <div className="via-primary/50 absolute top-0 left-1/2 h-px w-3/5 -translate-x-1/2 bg-gradient-to-r from-transparent to-transparent transition-all ease-in-out"></div>
       <motion.div
-        ref={ref}
+        ref={sectionRef}
         initial={{ opacity: 0, y: 50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.5, delay: 0 }}
         className="container mx-auto flex flex-col items-center gap-6 sm:gap-12"
       >
@@ -112,9 +130,9 @@ export default function Features() {
                 className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-colors duration-150 will-change-transform md:col-span-6 xl:col-span-6 xl:col-start-2 hover:border-[#e78a53]/60"
                 onMouseEnter={() => setIsCliHovering(true)}
                 onMouseLeave={() => setIsCliHovering(false)}
-                ref={ref}
+                ref={cliRef}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={isCliInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 style={{ transform: "translateZ(0)" }}
               >
@@ -129,23 +147,26 @@ export default function Features() {
                 </div>
                 <div className="pointer-events-none flex grow items-center justify-center select-none relative">
                   <div
-                    className="relative w-full h-[400px] rounded-xl overflow-hidden"
+                    className="relative w-full h-[300px] sm:h-[360px] md:h-[400px] rounded-xl overflow-hidden"
                     style={{ borderRadius: "20px" }}
                   >
                     {/* Background Image */}
-                    <div className="absolute inset-0">
-                      <Image
-                        src="https://framerusercontent.com/images/UjqUIiBHmIcSH9vos9HlG2BF4bo.png"
-                        alt="Arrow-CoreExchange"
-                        fill
-                        priority={false}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 800px"
-                        className="object-cover rounded-xl"
-                      />
-                    </div>
+                    {(isCliInView || shouldPreloadFirst) && (
+                      <div className="absolute inset-0">
+                        <Image
+                          src="https://framerusercontent.com/images/UjqUIiBHmIcSH9vos9HlG2BF4bo.png"
+                          alt="Arrow-CoreExchange"
+                          fill
+                          priority={shouldPreloadFirst}
+                          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 800px"
+                          className="object-cover rounded-xl"
+                        />
+                      </div>
+                    )}
 
                     {/* Animated SVG Connecting Lines */}
-                    <motion.div
+                    {(isCliInView || shouldPreloadFirst) && (
+                      <motion.div
                       className="absolute inset-0 flex items-center justify-center"
                       initial={{ opacity: 0 }}
                       animate={isCliHovering ? { opacity: 1 } : { opacity: 0 }}
@@ -180,10 +201,12 @@ export default function Features() {
                           }}
                         />
                       </svg>
-                    </motion.div>
+                      </motion.div>
+                    )}
 
                     {/* Animated Purple Blur Effect */}
-                    <motion.div
+                    {(isCliInView || shouldPreloadFirst) && (
+                      <motion.div
                       className="absolute top-1/2 left-1/2 w-16 h-16 bg-purple-500 rounded-full blur-[74px] opacity-65 transform -translate-x-1/2 -translate-y-1/2"
                       initial={{ scale: 1 }}
                       animate={isCliHovering ? { scale: [1, 1.342, 1, 1.342] } : { scale: 1 }}
@@ -194,6 +217,7 @@ export default function Features() {
                         repeatType: "loop",
                       }}
                     />
+                    )}
 
                     {/* Main Content Container with Staggered Animations */}
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -267,7 +291,8 @@ export default function Features() {
                     </div>
 
                     {/* Animated Circular Border */}
-                    <motion.div
+                    {(isCliInView || shouldPreloadFirst) && (
+                      <motion.div
                       className="absolute inset-0 flex items-center justify-center"
                       initial={{ opacity: 0 }}
                       animate={isCliHovering ? { opacity: 1 } : { opacity: 0 }}
@@ -292,7 +317,8 @@ export default function Features() {
                           }}
                         />
                       </svg>
-                    </motion.div>
+                      </motion.div>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -302,9 +328,9 @@ export default function Features() {
                 className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-colors duration-150 will-change-transform md:col-span-6 xl:col-span-6 xl:col-start-8 hover:border-[#e78a53]/60"
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
-                ref={ref}
+                ref={globalRef}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={isGlobalInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 style={{ transform: "translateZ(0)" }}
               >
@@ -339,7 +365,7 @@ export default function Features() {
                           <div className="bg-secondary/20 h-[400px] w-[400px] animate-pulse rounded-full"></div>
                         }
                       >
-                        {isInView ? (
+                        {isGlobalInView ? (
                           <Earth baseColor={baseColor} markerColor={[0, 0, 0]} glowColor={glowColor} dark={dark} />
                         ) : (
                           <div className="bg-secondary/20 h-[400px] w-[400px] rounded-full" />
@@ -359,8 +385,9 @@ export default function Features() {
                 className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-colors duration-150 will-change-transform md:col-span-6 xl:col-span-6 xl:col-start-2 hover:border-[#e78a53]/50"
                 onMouseEnter={() => setIsFeature3Hovering(true)}
                 onMouseLeave={() => setIsFeature3Hovering(false)}
+                ref={feature3Ref}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={isFeature3InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
                 style={{ transform: "translateZ(0)" }}
               >
@@ -475,8 +502,9 @@ export default function Features() {
                 className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-colors duration-150 will-change-transform md:col-span-6 xl:col-span-6 xl:col-start-8 hover:border-[#e78a53]/60"
                 onMouseEnter={() => setIsFeature4Hovering(true)}
                 onMouseLeave={() => setIsFeature4Hovering(false)}
+                ref={feature4Ref}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={isFeature4InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
                 whileHover={{ rotateY: 5, rotateX: 2, transition: { duration: 0.12 } }}
                 style={{ transform: "translateZ(0)" }}
