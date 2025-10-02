@@ -19,16 +19,6 @@ export const FollowerPointerCard = ({
   const [rect, setRect] = useState<DOMRect | null>(null)
   const [isInside, setIsInside] = useState<boolean>(false)
 
-  useEffect(() => {
-    console.log("[v0] FollowerPointerCard mounted")
-    return () => {
-      console.log("[v0] FollowerPointerCard unmounted")
-    }
-  }, [])
-
-  useEffect(() => {
-    console.log("[v0] isInside changed:", isInside)
-  }, [isInside])
 
   useEffect(() => {
     const updateRect = () => {

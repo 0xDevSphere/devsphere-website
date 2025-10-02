@@ -86,6 +86,7 @@ export default function Home() {
             alt="DevSphere Logo"
             width={24}
             height={24}
+            sizes="24px"
             className="rounded-full"
           />
           <span className="text-lg font-semibold text-foreground">DevSphere</span>
@@ -93,6 +94,7 @@ export default function Home() {
 
         <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground md:flex md:space-x-2">
           <a
+            href="#features"
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
@@ -112,6 +114,7 @@ export default function Home() {
             <span className="relative z-20">Features</span>
           </a>
           <a
+            href="#membership"
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
@@ -131,6 +134,7 @@ export default function Home() {
             <span className="relative z-20">Membership</span>
           </a>
           <a
+            href="#testimonials"
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
@@ -150,6 +154,7 @@ export default function Home() {
             <span className="relative z-20">Testimonials</span>
           </a>
           <a
+            href="#faq"
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
@@ -192,6 +197,7 @@ export default function Home() {
             alt="DevSphere Logo"
             width={24}
             height={24}
+            sizes="24px"
             className="rounded-full"
           />
           <span className="text-base font-semibold text-foreground">DevSphere</span>

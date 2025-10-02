@@ -1,5 +1,7 @@
 "use client"
 
+import dynamic from "next/dynamic"
+import Image from "next/image"
 import { PixelCard } from "../ui/pixelcards"
 import { geist } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
@@ -15,6 +17,9 @@ import Link from "next/link"
 
 const PIXEL_SCRIPT_URL =
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pixel-RKkUKH2OXWk9adKbDnozmndkwseTQh.js"
+
+const Beam = dynamic(() => import("../ui/gridbeam").then(m => m.Beam), { ssr: false, loading: () => null })
+const LazyCardHoverEffect = dynamic(() => import("../ui/pulse-card").then(m => m.CardHoverEffect), { ssr: false, loading: () => null })
 
 export default function Hero() {
   const [isScriptLoaded, setIsScriptLoaded] = useState(false)
@@ -87,37 +92,45 @@ export default function Hero() {
 
   return (
     <div id="hero-section" className="bg-background relative min-h-screen w-full overflow-x-hidden py-32 md:px-6">
-      <img
+      <Image
         src="/vector1.webp"
         alt="Vector"
         width={300}
-        draggable={false}
         height={300}
+        priority={false}
+        loading="lazy"
         className="absolute top-0 right-0 z-[2] object-cover object-center select-none"
+        sizes="(max-width: 768px) 150px, 300px"
       />
-      <img
+      <Image
         src="/vector2.png"
         alt="Vector"
         width={300}
         height={300}
-        draggable={false}
+        priority={false}
+        loading="lazy"
         className="absolute top-0 left-0 z-[2] object-cover object-center select-none"
+        sizes="(max-width: 768px) 150px, 300px"
       />
-      <img
+      <Image
         src="/vector5.webp"
         alt="Vector"
         width={300}
-        draggable={false}
         height={300}
+        priority={false}
+        loading="lazy"
         className="absolute bottom-0 -left-44 z-[2] -rotate-90 object-cover object-center select-none"
+        sizes="(max-width: 768px) 150px, 300px"
       />
-      <img
+      <Image
         src="/vector6.png"
         alt="Vector"
         width={300}
-        draggable={false}
         height={300}
+        priority={false}
+        loading="lazy"
         className="absolute -right-44 bottom-0 z-[2] rotate-90 object-cover object-center select-none"
+        sizes="(max-width: 768px) 150px, 300px"
       />
       <div className="container mx-auto px-4 2xl:max-w-[1400px]">
         <motion.div
@@ -140,11 +153,14 @@ export default function Hero() {
             transition={{ duration: 0.75, delay: 0.2 }}
           >
             Prebuilt UI
-            <img
+            <Image
               src="/rose.webp"
               alt="Logo"
-              draggable={false}
-              className="mx-4 mb-2 inline-block h-12 w-12 md:h-16 md:w-16"
+              width={64}
+              height={64}
+              priority
+              className="mx-4 mb-2 inline-block h-12 w-12 md:h-16 md:w-16 select-none"
+              sizes="(max-width: 768px) 48px, 64px"
             />
             blocks to ship beautiful MVPs fast.
           </motion.h1>
@@ -193,29 +209,26 @@ export default function Hero() {
             className="mt-4 mr-2 hidden w-96 brightness-[4] select-none xl:block"
           />
           <span className="text-sm text-gray-500">We use industry standards like </span>
-          <img
+          <Image
             src="/nextjs.webp"
-            draggable={false}
             alt="Next.js"
             width={28}
             height={28}
             className="h-7 w-7 select-none"
           />
-          <img
+          <Image
             src="/tailwind.webp"
             alt="Tailwind CSS"
             width={28}
             height={28}
             className="h-7 w-7 select-none"
-            draggable={false}
           />
-          <img
+          <Image
             src="/framer.webp"
             alt="Framer Motion"
             width={24}
             height={24}
             className="h-6 w-6 select-none"
-            draggable={false}
           />
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -223,13 +236,14 @@ export default function Hero() {
             transition={{ duration: 1, delay: 1.25 }}
             className="mt-4 ml-2 hidden w-96 select-none xl:block"
           >
-            <img
+            <Image
               src="/vector3.webp"
               alt="Vector graphic"
               width={384}
               height={100}
-              draggable={false}
-              className="brightness-[4]"
+              priority={false}
+              loading="lazy"
+              className="brightness-[4] select-none"
             />
           </motion.div>
         </motion.div>
@@ -278,7 +292,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.25 }}
               >
-                <CardHoverEffect
+                <LazyCardHoverEffect
                   title={card.title}
                   description={card.description}
                   icon={card.icon}
