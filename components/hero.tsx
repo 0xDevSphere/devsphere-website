@@ -20,7 +20,6 @@ const PIXEL_SCRIPT_URL =
 
 const Beam = dynamic(() => import("../ui/gridbeam").then(m => m.Beam), { ssr: false, loading: () => null })
 const LazyCardHoverEffect = dynamic(() => import("../ui/pulse-card").then(m => m.CardHoverEffect), { ssr: false, loading: () => null })
-
 export default function Hero() {
   const [isScriptLoaded, setIsScriptLoaded] = useState(false)
 

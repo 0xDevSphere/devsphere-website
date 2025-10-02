@@ -229,13 +229,13 @@ export default function Features() {
                           transition={{ duration: 0.6, ease: "easeOut" }}
                           whileHover={{ scale: 1.1, rotate: 5 }}
                         >
-                          <Image
-                            src="/devsphere.svg"
-                            alt="DevSphere"
-                            width={64}
-                            height={64}
-                            className="w-full h-full object-cover"
-                            priority={false}
+                        <Image
+                          src="/devsphere.svg"
+                          alt="DevSphere"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-cover"
+                          priority={false}
                           />
                         </motion.div>
 
