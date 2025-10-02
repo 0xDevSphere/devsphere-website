@@ -25,7 +25,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     socials: {
       linkedin: "https://www.linkedin.com/in/ritam-rao-86503a2b6",
       github: "https://github.com/RitamRoa",
-      instagram: "https://www.instagram.com/ritam.rao",
+      instagram: "https://www.instagram.com/ritam.roa",
     },
   },
   {
@@ -40,7 +40,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Sharadh Naidu",
     role: "Technical Lead",
-    imageSrc: "/sharadh.png",
+    imageSrc: "/sharadh.jpg",
     socials: {
       linkedin: "https://www.linkedin.com/in/sharadh-naidu-72259a32b/",
       github: "https://github.com/SharadhNaidu",
@@ -66,7 +66,7 @@ const TEAM_MEMBERS: TeamMember[] = [
       instagram: "https://www.instagram.com/jack.k_28?igsh=MTZycms0NzNocjFxMA==",
     },
   },
-  { name: "Sharan Prabhu", role: "Media", imageSrc: "/placeholder-user.jpg" },
+  { name: "Sharan Prabhu", role: "Media", imageSrc: "/sharan.jpg" },
   {
     name: "B.Lalith Aditya",
     role: "Media - Cinematography Lead",
@@ -101,7 +101,14 @@ const TEAM_MEMBERS: TeamMember[] = [
       github: "https://github.com/nomi-26/",
     },
   },
-  { name: "Pranav Krishna", role: "Tech", imageSrc: "/placeholder-user.jpg" },
+  {
+    name: "Pranav Krishna",
+    role: "Tech",
+    imageSrc: "/pranav,jpg.jpg",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/pranav-prasanna-krishna-97033832b",
+    },
+  },
 ]
 
 const ADVISORS: TeamMember[] = [
@@ -130,9 +137,8 @@ const ADVISORS: TeamMember[] = [
     role: "Content Advisor",
     imageSrc: "/harsha.jpg",
     socials: {
-      linkedin: "https://linkedin.com/in/sushanth-harsha-9344a0220",
+      linkedin: "https://www.linkedin.com/in/sushanth-h-9344a0220/",
       github: "https://github.com/SushanthHarsha/",
-      instagram: "https://www.instagram.com/_agnivarcas/",
     },
   },
   {
@@ -150,9 +156,9 @@ const ADVISORS: TeamMember[] = [
     role: "Technical Advisor",
     imageSrc: "/Pushan.jpg",
     socials: {
-      linkedin: "https://www.linkedin.com/in/pushan-t/",
-      github: "https://github.com/PushanT",
-      instagram: "https://www.instagram.com/_pushan_t/",
+      linkedin: "https://www.linkedin.com/in/pushant/",
+      github: "https://github.com/Pushan2005",
+      instagram: "https://www.instagram.com/pushan_fillertext",
     },
   },
 ]

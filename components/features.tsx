@@ -3,7 +3,8 @@
 import type React from "react"
 
 import { useTheme } from "next-themes"
-import Earth from "./ui/globe"
+import dynamic from "next/dynamic"
+const Earth = dynamic(() => import("./ui/globe"), { ssr: false })
 import ScrambleHover from "./ui/scramble"
 import { FollowerPointerCard } from "./ui/following-pointer"
 import { motion, useInView } from "framer-motion"
@@ -338,7 +339,11 @@ export default function Features() {
                           <div className="bg-secondary/20 h-[400px] w-[400px] animate-pulse rounded-full"></div>
                         }
                       >
-                        <Earth baseColor={baseColor} markerColor={[0, 0, 0]} glowColor={glowColor} dark={dark} />
+                        {isInView ? (
+                          <Earth baseColor={baseColor} markerColor={[0, 0, 0]} glowColor={glowColor} dark={dark} />
+                        ) : (
+                          <div className="bg-secondary/20 h-[400px] w-[400px] rounded-full" />
+                        )}
                       </Suspense>
                     </div>
                   </div>

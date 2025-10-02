@@ -2,11 +2,13 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isAboutOpen, setIsAboutOpen] = useState(false)
+  const aboutCloseTimerRef = useRef<number | null>(null)
 
   useEffect(() => {
     const root = window.document.documentElement
@@ -18,6 +20,14 @@ export function Navbar() {
     const handleScroll = () => setIsScrolled(window.scrollY > 100)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (aboutCloseTimerRef.current) {
+        clearTimeout(aboutCloseTimerRef.current)
+      }
+    }
   }, [])
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
@@ -51,39 +61,53 @@ export function Navbar() {
           <a href="/#testimonials" className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
             <span className="relative z-20">Testimonials</span>
           </a>
-          <div className="relative group">
-            <button className="relative flex items-center gap-1 px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-              <span className="relative z-20">About</span>
-              <svg
-                className="size-4 text-muted-foreground transition-transform duration-200 group-hover:rotate-180"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            </button>
-            <div className="pointer-events-none absolute left-0 top-full mt-2 w-[220px] rounded-2xl border border-border/60 bg-background/95 backdrop-blur-xl shadow-2xl ring-1 ring-border/40 opacity-0 translate-y-1 scale-95 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto">
-              <div className="p-2">
-                <Link href="/core-team" className="block rounded-lg px-3 py-2 hover:bg-background/70 hover:text-foreground transition-colors">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium">Team</span>
-                    <span className="ml-auto text-xs text-muted-foreground">Meet us</span>
-                  </div>
-                </Link>
-                <Link href="/#faq" className="mt-1 block rounded-lg px-3 py-2 hover:bg-background/70 hover:text-foreground transition-colors">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium">FAQ</span>
-                    <span className="ml-auto text-xs text-muted-foreground">Get answers</span>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
+           <div
+             className="relative"
+             onMouseEnter={() => {
+               if (aboutCloseTimerRef.current) clearTimeout(aboutCloseTimerRef.current)
+               setIsAboutOpen(true)
+             }}
+             onMouseLeave={() => {
+               if (aboutCloseTimerRef.current) clearTimeout(aboutCloseTimerRef.current)
+               aboutCloseTimerRef.current = window.setTimeout(() => setIsAboutOpen(false), 1000)
+             }}
+           >
+             <button className="relative flex items-center gap-1 px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+               <span className="relative z-20">About</span>
+               <svg
+                 className={`size-4 text-muted-foreground transition-transform duration-200 ${isAboutOpen ? "rotate-180" : ""}`}
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 strokeWidth="2"
+                 strokeLinecap="round"
+                 strokeLinejoin="round"
+                 aria-hidden="true"
+               >
+                 <path d="m6 9 6 6 6-6" />
+               </svg>
+             </button>
+             <div
+               className={`absolute left-0 top-full mt-2 w-[220px] rounded-2xl border border-border/60 bg-background/95 backdrop-blur-xl shadow-2xl ring-1 ring-border/40 transition-all duration-200 ${
+                 isAboutOpen ? "opacity-100 translate-y-0 scale-100 pointer-events-auto" : "opacity-0 translate-y-1 scale-95 pointer-events-none"
+               }`}
+             >
+               <div className="p-2">
+                 <Link href="/core-team" className="block rounded-lg px-3 py-2 hover:bg-background/70 hover:text-foreground transition-colors">
+                   <div className="flex items-center gap-2">
+                     <span className="text-sm font-medium">Team</span>
+                     <span className="ml-auto text-xs text-muted-foreground">Meet us</span>
+                   </div>
+                 </Link>
+                 <Link href="/#faq" className="mt-1 block rounded-lg px-3 py-2 hover:bg-background/70 hover:text-foreground transition-colors">
+                   <div className="flex items-center gap-2">
+                     <span className="text-sm font-medium">FAQ</span>
+                     <span className="ml-auto text-xs text-muted-foreground">Get answers</span>
+                   </div>
+                 </Link>
+               </div>
+             </div>
+           </div>
         </div>
 
         <div className="flex items-center gap-4">
