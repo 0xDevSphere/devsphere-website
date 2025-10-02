@@ -1,0 +1,20 @@
+# DevSphere - Robots.txt
+# Created by Taufeeq Riyaz
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://devsphere.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 0
+
+# Additional user agents
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+

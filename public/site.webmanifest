@@ -1,0 +1,28 @@
+{
+  "name": "DevSphere — Open Source & Web 3.0 Club of RV University",
+  "short_name": "DevSphere",
+  "description": "DevSphere is the Open Source and Web 3.0 Club of RV University. We build open source, explore blockchain, host workshops and hackathons, and grow student developers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/devsphereLogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/devsphereLogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["development", "productivity", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}
+
