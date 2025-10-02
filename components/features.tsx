@@ -11,6 +11,7 @@ import { Suspense, useEffect, useRef, useState } from "react"
 import { geist } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import ReactMarkdown from "react-markdown"
+import Image from "next/image"
 
 export default function Features() {
   const ref = useRef(null)
@@ -107,20 +108,16 @@ export default function Features() {
             <div className="grid grid-cols-12 gap-4 justify-center">
               {/* Cli */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-2"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-colors duration-150 will-change-transform md:col-span-6 xl:col-span-6 xl:col-start-2 hover:border-[#e78a53]/60"
                 onMouseEnter={() => setIsCliHovering(true)}
                 onMouseLeave={() => setIsCliHovering(false)}
                 ref={ref}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                whileHover={{
-                  scale: 1.02,
-                  borderColor: "rgba(231, 138, 83, 0.6)",
-                  boxShadow: "0 0 30px rgba(231, 138, 83, 0.2)",
-                }}
-                style={{ transition: "all 0s ease-in-out" }}
+                style={{ transform: "translateZ(0)" }}
               >
+                <div className="pointer-events-none absolute inset-0 rounded-xl ring-2 ring-[#e78a53]/60 opacity-0 transition-opacity duration-150 group-hover:opacity-100"></div>
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">Hands-On Workshops</h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
@@ -136,10 +133,13 @@ export default function Features() {
                   >
                     {/* Background Image */}
                     <div className="absolute inset-0">
-                      <img
+                      <Image
                         src="https://framerusercontent.com/images/UjqUIiBHmIcSH9vos9HlG2BF4bo.png"
                         alt="Arrow-CoreExchange"
-                        className="w-full h-full object-cover rounded-xl"
+                        fill
+                        priority={false}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 800px"
+                        className="object-cover rounded-xl"
                       />
                     </div>
 
@@ -229,10 +229,13 @@ export default function Features() {
                           transition={{ duration: 0.6, ease: "easeOut" }}
                           whileHover={{ scale: 1.1, rotate: 5 }}
                         >
-                          <img
-                            src="https://framerusercontent.com/images/q43ivjLz67lXhWf6TKfLIh0FY.png"
-                            alt="Logo"
-                            className="w-full h-full object-cover"
+                        <Image
+                          src="/devsphere.svg"
+                          alt="DevSphere"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-cover"
+                          priority={false}
                           />
                         </motion.div>
 
@@ -295,20 +298,16 @@ export default function Features() {
 
               {/* Global */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-8"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-colors duration-150 will-change-transform md:col-span-6 xl:col-span-6 xl:col-start-8 hover:border-[#e78a53]/60"
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
                 ref={ref}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                whileHover={{
-                  scale: 1.02,
-                  borderColor: "rgba(231, 138, 83, 0.6)",
-                  boxShadow: "0 0 30px rgba(231, 138, 83, 0.2)",
-                }}
-                style={{ transition: "all 0s ease-in-out" }}
+                style={{ transform: "translateZ(0)" }}
               >
+                <div className="pointer-events-none absolute inset-0 rounded-xl ring-2 ring-[#e78a53]/60 opacity-0 transition-opacity duration-150 group-hover:opacity-100"></div>
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">Global Community</h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
@@ -319,7 +318,7 @@ export default function Features() {
                 </div>
                 <div className="flex min-h-[300px] grow items-start justify-center select-none">
                   <h1 className="mt-8 text-center text-5xl leading-[100%] font-semibold sm:leading-normal lg:mt-12 lg:text-6xl">
-                    <span className='bg-background relative mt-3 inline-block w-fit rounded-md border px-1.5 py-0.5 before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-full before:bg-[url("/noise.gif")] before:opacity-[0.09] before:content-[""]'>
+                    <span className='bg-background relative mt-3 inline-block w-fit rounded-md border px-1.5 py-0.5'>
                       <ScrambleHover
                         text="Community"
                         scrambleSpeed={70}
@@ -352,19 +351,15 @@ export default function Features() {
 
               {/* Smart Components */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-2"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-colors duration-150 will-change-transform md:col-span-6 xl:col-span-6 xl:col-start-2 hover:border-[#e78a53]/50"
                 onMouseEnter={() => setIsFeature3Hovering(true)}
                 onMouseLeave={() => setIsFeature3Hovering(false)}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
-                whileHover={{
-                  scale: 1.02,
-                  borderColor: "rgba(231, 138, 83, 0.5)",
-                  boxShadow: "0 0 30px rgba(231, 138, 83, 0.2)",
-                }}
-                style={{ transition: "all 0s ease-in-out" }}
+                style={{ transform: "translateZ(0)" }}
               >
+                <div className="pointer-events-none absolute inset-0 rounded-xl ring-2 ring-[#e78a53]/50 opacity-0 transition-opacity duration-150 group-hover:opacity-100"></div>
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">Hackathons & Events</h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
@@ -472,20 +467,16 @@ export default function Features() {
 
               {/* Dynamic Layouts */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-8"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-colors duration-150 will-change-transform md:col-span-6 xl:col-span-6 xl:col-start-8 hover:border-[#e78a53]/60"
                 onMouseEnter={() => setIsFeature4Hovering(true)}
                 onMouseLeave={() => setIsFeature4Hovering(false)}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
-                whileHover={{
-                  rotateY: 5,
-                  rotateX: 2,
-                  boxShadow: "0 20px 40px rgba(231, 138, 83, 0.3)",
-                  borderColor: "rgba(231, 138, 83, 0.6)",
-                }}
-                style={{ transition: "all 0s ease-in-out" }}
+                whileHover={{ rotateY: 5, rotateX: 2, transition: { duration: 0.12 } }}
+                style={{ transform: "translateZ(0)" }}
               >
+                <div className="pointer-events-none absolute inset-0 rounded-xl ring-2 ring-[#e78a53]/60 opacity-0 transition-opacity duration-150 group-hover:opacity-100"></div>
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">Mentorship Programs</h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
@@ -496,10 +487,13 @@ export default function Features() {
                 </div>
                 <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
                   <div className="relative w-full max-w-sm">
-                    <img
+                    <Image
                       src="/mentorship.jpg"
                       alt="Mentorship Programs"
+                      width={640}
+                      height={480}
                       className="w-full h-auto rounded-lg shadow-lg"
+                      priority={false}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
                   </div>

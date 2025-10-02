@@ -1,21 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useState, useEffect } from "react"
+import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Sparkles } from "lucide-react"
 
 export default function Hero() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
-
   return (
     <>
       <section className="relative overflow-hidden min-h-screen flex flex-col">
@@ -82,7 +72,7 @@ export default function Hero() {
 
               {/* Get started button */}
               <div className="flex items-center justify-center">
-                <a href="/docs/components/theme-toggle-animations">
+                <a href="https://chat.whatsapp.com/Fhvp7ZQvdHo4sdIr1GglAY" target="_blank" rel="noopener noreferrer">
                   <div className="group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full">
                     <div className="border border-border bg-primary h-[40px] rounded-full flex items-center justify-center text-primary-foreground">
                       <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-base">
@@ -140,10 +130,15 @@ export default function Hero() {
               <div className="flex items-center justify-center gap-8">
                 {/* Microsoft Logo */}
                 <div className="hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all duration-300">
-                  <img
+                  <Image
                     src="/Microsoft-Logo-White.webp"
                     alt="Microsoft"
-                    className="h-12 object-contain"
+                    width={120}
+                    height={48}
+                    sizes="(max-width: 768px) 96px, 120px"
+                    priority={false}
+                    loading="lazy"
+                    style={{ height: "auto" }}
                   />
                 </div>
               </div>
