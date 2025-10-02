@@ -8,8 +8,8 @@ import { Sparkles } from "lucide-react"
 export default function Hero() {
   return (
     <>
-      <section className="relative overflow-hidden min-h-screen flex flex-col">
-        <div className="container mx-auto px-4 py-24 sm:py-32 relative z-10 flex-1 flex flex-col">
+      <section className="relative overflow-visible min-h-[100dvh] md:min-h-screen flex flex-col">
+        <div className="container mx-auto px-4 py-12 sm:py-24 lg:py-32 pb-[calc(env(safe-area-inset-bottom)+48px)] relative z-10 flex-1 flex flex-col">
           <div className="mx-auto max-w-4xl text-center flex-1 flex flex-col justify-center">
             {/* Badge */}
             <motion.div
@@ -31,7 +31,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mb-8"
             >
-              <h1 id="main-title" className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+              <h1 id="main-title" className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
                 Build the <span className="font-extrabold">future</span> with{" "}
                 <span className="block italic">Open Source & Web 3.0</span>
               </h1>
@@ -42,7 +42,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"
+              className="mx-auto mb-10 max-w-2xl text-base sm:text-lg text-muted-foreground"
             >
               DevSphere is the Open Source and Web 3.0 club of RV University. Join us to learn, build, and
               contribute to cutting-edge technologies that are shaping the future of the internet.
@@ -73,9 +73,9 @@ export default function Hero() {
               {/* Get started button */}
               <div className="flex items-center justify-center">
                 <a href="https://chat.whatsapp.com/Fhvp7ZQvdHo4sdIr1GglAY" target="_blank" rel="noopener noreferrer">
-                  <div className="group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full">
-                    <div className="border border-border bg-primary h-[40px] rounded-full flex items-center justify-center text-primary-foreground">
-                      <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-base">
+                  <div className="group cursor-pointer border border-border bg-card gap-2 h-[52px] flex items-center p-[8px] rounded-full">
+                    <div className="border border-border bg-primary h-[36px] rounded-full flex items-center justify-center text-primary-foreground">
+                      <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-sm sm:text-base">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -123,7 +123,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-auto pb-8"
+            className="mt-auto pb-[calc(env(safe-area-inset-bottom)+8px)] sm:pb-8"
           >
             <div className="text-center">
               <p className="text-sm text-muted-foreground mb-6">Brands We Worked With</p>
