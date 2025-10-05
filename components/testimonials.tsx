@@ -86,7 +86,20 @@ const TestimonialCard = ({
       <div className="text-white/90 leading-relaxed">{body}</div>
 
       <div className="mt-5 flex items-center gap-2">
-        <img src={img || "/placeholder.svg"} alt={name} height="40" width="40" className="h-10 w-10 rounded-full" />
+        <img
+          src={img || "/placeholder-user.jpg"}
+          alt={name}
+          height="40"
+          width="40"
+          className="h-10 w-10 rounded-full"
+          loading="lazy"
+          decoding="async"
+          onError={(e) => {
+            const target = e.currentTarget as HTMLImageElement
+            if (target.src.endsWith("/placeholder-user.jpg")) return
+            target.src = "/placeholder-user.jpg"
+          }}
+        />
         <div className="flex flex-col">
           <div className="leading-5 font-medium tracking-tight text-white">{name}</div>
           <div className="leading-5 tracking-tight text-white/60">{username}</div>
