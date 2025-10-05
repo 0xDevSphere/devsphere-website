@@ -91,7 +91,7 @@ export default function ScamWarningPage() {
                 </li>
                 <li className="flex items-start gap-3 text-sm text-muted-foreground">
                   <span className="mt-0.5 inline-flex size-5 items-center justify-center rounded-full bg-red-500/15 text-red-300">4</span>
-                  Let us know via our email <span className="font-mono text-foreground">club_devsphere@rvu.edu.in</span>.
+                  Let us know via our email.
                 </li>
               </ol>
             </div>
