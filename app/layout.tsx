@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     default: "DevSphere — Open Source & Web 3.0 Club of RV University",
     template: "%s | DevSphere",
   },
+  applicationName: "DevSphere",
+  generator: "Next.js",
   description:
     "DevSphere is the Open Source and Web 3.0 Club of RV University. We build in public, explore blockchain and modern web, run workshops and hackathons, and grow student developers.",
   keywords: [
@@ -31,6 +33,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Taufeeq Riyaz" }],
   creator: "Taufeeq Riyaz",
   publisher: "DevSphere",
+  referrer: "origin-when-cross-origin",
+  category: "technology",
   formatDetection: {
     email: false,
     address: false,
@@ -40,20 +44,41 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  themeColor: "#000000",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "DevSphere",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://devsphere.com",
+    url: "https://0xdevsphere.vercel.app",
     title: "DevSphere — Open Source & Web 3.0 Club of RV University",
     description:
       "DevSphere is the Open Source and Web 3.0 Club of RV University. Join us for workshops, hackathons, blockchain projects, and modern web development.",
     siteName: "DevSphere",
     images: [
       {
-        url: "/devsphereLogo.png",
+        url: "/banner.png",
         width: 1200,
         height: 630,
         alt: "DevSphere — RV University Open Source and Web 3.0 Club",
+        type: "image/png",
+      },
+      {
+        url: "/banner.png",
+        width: 1200,
+        height: 1200,
+        alt: "DevSphere — RV University Open Source and Web 3.0 Club",
+        type: "image/png",
+      },
+      {
+        url: "/devsphereLogo.png",
+        width: 800,
+        height: 600,
+        alt: "DevSphere Logo",
+        type: "image/png",
       },
     ],
   },
@@ -63,7 +88,7 @@ export const metadata: Metadata = {
     description:
       "DevSphere is RV University's Open Source and Web 3.0 Club. Workshops, hackathons, and real-world projects.",
     creator: "@taufeeqriyaz",
-    images: ["/devsphereLogo.png"],
+    images: ["/banner.png"],
   },
   robots: {
     index: true,
