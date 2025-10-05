@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
@@ -40,11 +40,10 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://devsphere.com"),
+  metadataBase: new URL("https://0xdevsphere.vercel.app/"),
   alternates: {
     canonical: "/",
   },
-  themeColor: "#000000",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -53,31 +52,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://0xdevsphere.vercel.app",
+    url: "https://0xdevsphere.vercel.app/",
     title: "DevSphere — Open Source & Web 3.0 Club of RV University",
     description:
       "DevSphere is the Open Source and Web 3.0 Club of RV University. Join us for workshops, hackathons, blockchain projects, and modern web development.",
     siteName: "DevSphere",
     images: [
       {
-        url: "/banner.png",
+        url: "/https://raw.githubusercontent.com/0xDevSphere/devsphere-website/refs/heads/main/public/banner.png",
         width: 1200,
         height: 630,
         alt: "DevSphere — RV University Open Source and Web 3.0 Club",
-        type: "image/png",
-      },
-      {
-        url: "/banner.png",
-        width: 1200,
-        height: 1200,
-        alt: "DevSphere — RV University Open Source and Web 3.0 Club",
-        type: "image/png",
-      },
-      {
-        url: "/devsphereLogo.png",
-        width: 800,
-        height: 600,
-        alt: "DevSphere Logo",
         type: "image/png",
       },
     ],
@@ -88,7 +73,7 @@ export const metadata: Metadata = {
     description:
       "DevSphere is RV University's Open Source and Web 3.0 Club. Workshops, hackathons, and real-world projects.",
     creator: "@taufeeqriyaz",
-    images: ["/banner.png"],
+    images: ["/https://raw.githubusercontent.com/0xDevSphere/devsphere-website/refs/heads/main/public/banner.png"],
   },
   robots: {
     index: true,
@@ -107,6 +92,10 @@ export const metadata: Metadata = {
     apple: "/devsphereLogo.png",
   },
   manifest: "/site.webmanifest",
+}
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
 }
 
 export default function RootLayout({
