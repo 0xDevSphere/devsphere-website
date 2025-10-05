@@ -56,7 +56,7 @@ export default function Hero() {
             >
               {/* Decorative Elements */}
               <svg
-                width="100"
+                width="100" 
                 height="50"
                 viewBox="0 0 100 50"
                 fill="currentColor"
