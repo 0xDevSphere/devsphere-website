@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: "DevSphere",
     images: [
       {
-        url: "/https://raw.githubusercontent.com/0xDevSphere/devsphere-website/refs/heads/main/public/banner.png",
+        url: "https://raw.githubusercontent.com/0xDevSphere/devsphere-website/refs/heads/main/public/banner.png",
         width: 1200,
         height: 630,
         alt: "DevSphere — RV University Open Source and Web 3.0 Club",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     description:
       "DevSphere is RV University's Open Source and Web 3.0 Club. Workshops, hackathons, and real-world projects.",
     creator: "@taufeeqriyaz",
-    images: ["/https://raw.githubusercontent.com/0xDevSphere/devsphere-website/refs/heads/main/public/banner.png"],
+    images: ["https://raw.githubusercontent.com/0xDevSphere/devsphere-website/refs/heads/main/public/banner.png"],
   },
   robots: {
     index: true,

@@ -19,6 +19,7 @@ import { FAQSection } from "@/components/faq-section"
 import { PricingSection } from "@/components/pricing-section"
 import { StickyFooter } from "@/components/sticky-footer"
 import { Navbar } from "@/components/navbar"
+import ScamAlertBanner from "@/components/scam-alert-banner"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -94,6 +95,9 @@ export default function Home() {
       </div>
 
       <NewReleasePromo />
+
+      {/* Scam Alert Banner placed after feature promo and before FAQ */}
+      <ScamAlertBanner />
 
       {/* FAQ Section */}
       <div id="faq">

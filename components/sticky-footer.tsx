@@ -33,7 +33,7 @@ export function StickyFooter() {
       {isAtBottom && (
         <motion.div
           className="fixed z-50 bottom-0 left-0 w-full h-80 flex justify-center items-center"
-          style={{ backgroundColor: "#e78a53" }}
+          style={{ backgroundColor: "var(--brand-orange)" }}
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
@@ -41,7 +41,7 @@ export function StickyFooter() {
         >
           <div
             className="relative overflow-hidden w-full h-full flex justify-end px-12 text-right items-start py-12"
-            style={{ color: "#121113" }}
+            style={{ color: "var(--ink)" }}
           >
             <motion.div
               className="flex flex-row space-x-12 sm:space-x-16 md:space-x-24 text-sm sm:text-lg md:text-xl"
@@ -55,10 +55,7 @@ export function StickyFooter() {
                     href="https://instagram.com/devsphere.rvu"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline cursor-pointer transition-colors"
-                    style={{ color: "#121113" }}
-                    onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "rgba(18, 17, 19, 0.8)")}
-                    onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#121113")}
+                    className="hover:underline cursor-pointer transition-colors text-[color:var(--ink)] hover:text-[color:rgba(18,17,19,0.8)]"
                   >
                     Instagram
                   </a>
@@ -68,10 +65,7 @@ export function StickyFooter() {
                     href="https://linkedin.com/company/99369297"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline cursor-pointer transition-colors"
-                    style={{ color: "#121113" }}
-                    onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "rgba(18, 17, 19, 0.8)")}
-                    onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#121113")}
+                    className="hover:underline cursor-pointer transition-colors text-[color:var(--ink)] hover:text-[color:rgba(18,17,19,0.8)]"
                   >
                     LinkedIn
                   </a>
@@ -81,10 +75,7 @@ export function StickyFooter() {
                     href="https://chat.whatsapp.com/Fhvp7ZQvdHo4sdIr1GglAY"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline cursor-pointer transition-colors"
-                    style={{ color: "#121113" }}
-                    onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "rgba(18, 17, 19, 0.8)")}
-                    onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#121113")}
+                    className="hover:underline cursor-pointer transition-colors text-[color:var(--ink)] hover:text-[color:rgba(18,17,19,0.8)]"
                   >
                     WhatsApp Community
                   </a>
@@ -94,10 +85,7 @@ export function StickyFooter() {
                     href="https://github.com/0xDevSphere"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline cursor-pointer transition-colors"
-                    style={{ color: "#121113" }}
-                    onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "rgba(18, 17, 19, 0.8)")}
-                    onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#121113")}
+                    className="hover:underline cursor-pointer transition-colors text-[color:var(--ink)] hover:text-[color:rgba(18,17,19,0.8)]"
                   >
                     GitHub
                   </a>
@@ -105,10 +93,7 @@ export function StickyFooter() {
                 <li>
                   <a
                     href="/code-of-conduct"
-                    className="hover:underline cursor-pointer transition-colors"
-                    style={{ color: "#121113" }}
-                    onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "rgba(18, 17, 19, 0.8)")}
-                    onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#121113")}
+                    className="hover:underline cursor-pointer transition-colors text-[color:var(--ink)] hover:text-[color:rgba(18,17,19,0.8)]"
                   >
                     Code of Conduct
                   </a>
@@ -117,7 +102,7 @@ export function StickyFooter() {
             </motion.div>
             <motion.h2
               className="absolute bottom-0 left-0 translate-y-1/3 sm:text-[192px] text-[80px] font-bold select-none"
-              style={{ color: "#121113" }}
+              style={{ color: "var(--ink)" }}
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
