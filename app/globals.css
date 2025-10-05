@@ -36,6 +36,9 @@
   --sidebar-accent-foreground: #121113; /* Updated sidebar accent foreground to match */
   --sidebar-border: oklch(0.9276 0.0058 264.5313);
   --sidebar-ring: oklch(0.6716 0.1368 48.513);
+  /* Brand and utility colors */
+  --brand-orange: #e78a53;
+  --ink: #121113;
   --font-sans: Geist Mono, ui-monospace, monospace;
   --font-serif: serif;
   --font-mono: JetBrains Mono, monospace;
@@ -87,6 +90,9 @@
   --sidebar-accent-foreground: oklch(0.8109 0 0);
   --sidebar-border: oklch(0.252 0 0);
   --sidebar-ring: oklch(0.7214 0.1337 49.9802);
+  /* Brand and utility colors (same across themes unless customized) */
+  --brand-orange: #e78a53;
+  --ink: #121113;
   --font-sans: Geist Mono, ui-monospace, monospace;
   --font-serif: serif;
   --font-mono: JetBrains Mono, monospace;
