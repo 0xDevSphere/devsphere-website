@@ -7,25 +7,25 @@ const testimonials = [
     name: "S MD Adil Ahmed",
     username: "BTech 2028",
     body: "DevSphere is a great place to learn and grow. The community is very supportive and helps you build skills through real projects and teamwork.",
-    img: "/testimonials/adil.jpg",
+    img: "/Testimonials/adil.jpg",
   },
   {
     name: "Busetty Sugnesh",
     username: "BTech 2028",
     body: "DevSphere was where I first explored open source in a real way. More than just coding, it gave me a community to learn, share, and grow with.",
-    img: "/testimonials/busetty.jpg",
+    img: "/Testimonials/busetty.jpg",
   },
   {
     name: "Rabiya Basri",
     username: "BTech 2028",
     body: "DevSphere is a great place to start your journey. Beginners get the right guidance and support, and the community helps you learn by doing real projects. Everyone here is friendly and ready to help, which makes it easier to grow and improve your skills.",
-    img: "/testimonials/rabiya.jpg",
+    img: "/Testimonials/rabiya.jpg",
   },
   {
     name: "Pruthvi Krishna N.G.",
     username: "BTech 2029",
     body: "DevSphere has become one of my favorite clubs. I like how the admins help each other, and the webinars they conduct are amazing and helpful.",
-    img: "/testimonials/pruthvi.jpg",
+    img: "/Testimonials/pruthvi.jpg",
   },
   {
     name: "Harshitha CM",
@@ -43,7 +43,7 @@ const testimonials = [
     name: "Amith Emmanuel",
     username: "BCA 2029",
     body: "DevSphere has been an incredible platform for me to deepen my understanding of technology and collaborate with like‑minded peers. The club doesn’t just focus on coding—it fosters a culture of learning, innovation, and teamwork. My experience here has strengthened my skills and confidence, and I’m excited to contribute to real‑world projects.",
-    img: "/testimonials/amith.jpg",
+    img: "/Testimonials/amith.jpg",
   },
   {
     name: "Sree Govinth N",
