@@ -1,65 +1,72 @@
+"use client"
+
 import { Marquee } from "@/components/magicui/marquee"
 
 const testimonials = [
   {
-    name: "Arjun Mehta",
-    username: "CSE 3rd Year",
-    body: "DevSphere opened my eyes to the world of Web3. The blockchain workshops were incredibly hands-on and practical!",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    name: "S MD Adil Ahmed",
+    username: "BTech 2028",
+    body: "DevSphere is a great place to learn and grow. The community is very supportive and helps you build skills through real projects and teamwork.",
+    img: "/testimonials/adil.jpg",
   },
   {
-    name: "Sara Lin",
-    username: "IT 2nd Year",
-    body: "Made my first open source contribution through DevSphere. The mentorship program is amazing for beginners!",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+    name: "Busetty Sugnesh",
+    username: "BTech 2028",
+    body: "DevSphere was where I first explored open source in a real way. More than just coding, it gave me a community to learn, share, and grow with.",
+    img: "/testimonials/busetty.jpg",
   },
   {
-    name: "Devon Carter",
-    username: "CSE 4th Year",
-    body: "Won my first hackathon with my team at a DevSphere event. The experience was unforgettable!",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    name: "Rabiya Basri",
+    username: "BTech 2028",
+    body: "DevSphere is a great place to start your journey. Beginners get the right guidance and support, and the community helps you learn by doing real projects. Everyone here is friendly and ready to help, which makes it easier to grow and improve your skills.",
+    img: "/testimonials/rabiya.jpg",
   },
   {
-    name: "Priya Shah",
-    username: "IT 3rd Year",
-    body: "DevSphere helped me land an internship. The industry connections and projects were key to my success.",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    name: "Pruthvi Krishna N.G.",
+    username: "BTech 2029",
+    body: "DevSphere has become one of my favorite clubs. I like how the admins help each other, and the webinars they conduct are amazing and helpful.",
+    img: "/testimonials/pruthvi.jpg",
   },
   {
-    name: "Leo Martin",
-    username: "CSE 2nd Year",
-    body: "From zero blockchain knowledge to building my own DApp in 3 months. DevSphere made it possible!",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    name: "Harshitha CM",
+    username: "BCA 2028",
+    body: "Attending the workshop was really helpful—I learned about Perplexity and its uses. The live examples made it even more interesting. It's a good platform to learn something new.",
+    img: "/placeholder-user.jpg",
   },
   {
-    name: "Chloe Winters",
-    username: "IT 4th Year",
-    body: "The community here is incredible. Everyone's so supportive and always ready to help with projects.",
-    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
+    name: "Mahaveer Vaishnav",
+    username: "BSc 2028",
+    body: "Joining DevSphere immediately put me on a path to explore the tech field, and the vibrant community truly sets it apart. Being in touch with superb seniors—and learning and growing through their guidance—is the club's biggest asset. I look forward to more cutting-edge events and workshops as we keep exploring new technologies.",
+    img: "/placeholder-user.jpg",
   },
   {
-    name: "Ayaan Malik",
-    username: "CSE 3rd Year",
-    body: "Contributing to real open source projects with DevSphere boosted my GitHub profile significantly!",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    name: "Amith Emmanuel",
+    username: "BCA 2029",
+    body: "DevSphere has been an incredible platform for me to deepen my understanding of technology and collaborate with like‑minded peers. The club doesn’t just focus on coding—it fosters a culture of learning, innovation, and teamwork. My experience here has strengthened my skills and confidence, and I’m excited to contribute to real‑world projects.",
+    img: "/testimonials/amith.jpg",
   },
   {
-    name: "Monica Reeves",
-    username: "IT 2nd Year",
-    body: "The Web3 study groups are fantastic. Learning Solidity with peers makes it so much easier!",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-  },
-  {
-    name: "James Roy",
-    username: "CSE 4th Year",
-    body: "Being part of the core team taught me leadership and project management. Best decision ever!",
-    img: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
+    name: "Sree Govinth N",
+    username: "BTech 2027",
+    body: "DevSphere embodies the idea of surrounding yourself with people who push you to be better. Every idea gets support and the right opportunities. It’s the best club and community—always standing out because they trust your ability and help you excel.",
+    img: "/placeholder-user.jpg",
   },
 ]
 
-const firstColumn = testimonials.slice(0, 3)
-const secondColumn = testimonials.slice(3, 6)
-const thirdColumn = testimonials.slice(6, 9)
+function splitIntoColumns<T>(items: T[], columns: number): T[][] {
+  const result: T[][] = Array.from({ length: columns }, () => [])
+  const baseSize = Math.floor(items.length / columns)
+  const remainder = items.length % columns
+  let start = 0
+  for (let i = 0; i < columns; i++) {
+    const size = baseSize + (i < remainder ? 1 : 0)
+    result[i] = items.slice(start, start + size)
+    start += size
+  }
+  return result
+}
+
+const [firstColumn, secondColumn, thirdColumn] = splitIntoColumns(testimonials, 3)
 
 const TestimonialCard = ({
   img,
@@ -117,7 +124,7 @@ export function TestimonialsSection() {
           <div>
             <Marquee pauseOnHover vertical className="[--duration:20s]">
               {firstColumn.map((testimonial) => (
-                <TestimonialCard key={testimonial.username} {...testimonial} />
+                <TestimonialCard key={`${testimonial.name}-${testimonial.username}`} {...testimonial} />
               ))}
             </Marquee>
           </div>
@@ -125,7 +132,7 @@ export function TestimonialsSection() {
           <div className="hidden md:block">
             <Marquee reverse pauseOnHover vertical className="[--duration:25s]">
               {secondColumn.map((testimonial) => (
-                <TestimonialCard key={testimonial.username} {...testimonial} />
+                <TestimonialCard key={`${testimonial.name}-${testimonial.username}`} {...testimonial} />
               ))}
             </Marquee>
           </div>
@@ -133,7 +140,7 @@ export function TestimonialsSection() {
           <div className="hidden lg:block">
             <Marquee pauseOnHover vertical className="[--duration:30s]">
               {thirdColumn.map((testimonial) => (
-                <TestimonialCard key={testimonial.username} {...testimonial} />
+                <TestimonialCard key={`${testimonial.name}-${testimonial.username}`} {...testimonial} />
               ))}
             </Marquee>
           </div>
