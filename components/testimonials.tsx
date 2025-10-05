@@ -94,10 +94,24 @@ const TestimonialCard = ({
           className="h-10 w-10 rounded-full"
           loading="lazy"
           decoding="async"
+          data-attempt="local"
           onError={(e) => {
             const target = e.currentTarget as HTMLImageElement
-            if (target.src.endsWith("/placeholder-user.jpg")) return
-            target.src = "/placeholder-user.jpg"
+            const attempt = target.getAttribute("data-attempt")
+            // If local failed, try GitHub raw URL once
+            if (attempt === "local" && img && img.startsWith("/testimonials/")) {
+              const filename = img.split("/").pop()
+              if (filename) {
+                target.setAttribute("data-attempt", "raw")
+                target.src = `https://raw.githubusercontent.com/0xDevSphere/devsphere-website/refs/heads/main/public/testimonials/${filename}`
+                return
+              }
+            }
+            // Fallback to placeholder
+            if (!target.src.endsWith("/placeholder-user.jpg")) {
+              target.setAttribute("data-attempt", "placeholder")
+              target.src = "/placeholder-user.jpg"
+            }
           }}
         />
         <div className="flex flex-col">
