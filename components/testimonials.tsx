@@ -29,15 +29,15 @@ const testimonials = [
   },
   {
     name: "Harshitha CM",
-    username: "BCA 2028",
+    username: "BCA 2029",
     body: "Attending the workshop was really helpful—I learned about Perplexity and its uses. The live examples made it even more interesting. It's a good platform to learn something new.",
-    img: "/placeholder-user.jpg",
+    img: "/harshitha.jpg",
   },
   {
     name: "Mahaveer Vaishnav",
     username: "BSc 2028",
     body: "Joining DevSphere immediately put me on a path to explore the tech field, and the vibrant community truly sets it apart. Being in touch with superb seniors—and learning and growing through their guidance—is the club's biggest asset. I look forward to more cutting-edge events and workshops as we keep exploring new technologies.",
-    img: "/placeholder-user.jpg",
+    img: "/mahaveer.jpg",
   },
   {
     name: "Amith Emmanuel",
@@ -49,7 +49,7 @@ const testimonials = [
     name: "Sree Govinth N",
     username: "BTech 2027",
     body: "DevSphere embodies the idea of surrounding yourself with people who push you to be better. Every idea gets support and the right opportunities. It’s the best club and community—always standing out because they trust your ability and help you excel.",
-    img: "/placeholder-user.jpg",
+    img: "/sree.jpg",
   },
 ]
 
