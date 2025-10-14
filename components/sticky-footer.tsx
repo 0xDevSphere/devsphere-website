@@ -72,12 +72,12 @@ export function StickyFooter() {
                 </li>
                 <li>
                   <a
-                    href="https://chat.whatsapp.com/Fhvp7ZQvdHo4sdIr1GglAY"
+                    href="https://forms.gle/2AZjsRihYf9XME246"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline cursor-pointer transition-colors text-[color:var(--ink)] hover:text-[color:rgba(18,17,19,0.8)]"
                   >
-                    WhatsApp Community
+                    Join DevSphere
                   </a>
                 </li>
                 <li>

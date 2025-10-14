@@ -58,7 +58,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: "Jathin Kirani",
-    role: "Media - Content Lead",
+    role: "Media, Events and Experiences",
     imageSrc: "/jathin.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/jathin-kirani-nagaraj-2252152b7/",
@@ -69,7 +69,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   { name: "Sharan Prabhu", role: "Media", imageSrc: "/sharan.jpg" },
   {
     name: "B.Lalith Aditya",
-    role: "Media - Cinematography Lead",
+    role: "Media, Events and Experiences",
     imageSrc: "/lalith.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/lalith-aditya-b-0a99b3312/",
@@ -103,7 +103,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: "Pranav Krishna",
-    role: "Tech",
+    role: "Events and Experiences",
     imageSrc: "/pranav,jpg.jpg",
     socials: {
       linkedin: "https://www.linkedin.com/in/pranav-prasanna-krishna-97033832b",
@@ -288,12 +288,12 @@ export default function CoreTeamPage() {
           <p className="mt-3 text-muted-foreground">Connect with the team and thousands of builders.</p>
           <div className="mt-6">
             <a
-              href="https://chat.whatsapp.com/Fhvp7ZQvdHo4sdIr1GglAY"
+              href="https://forms.gle/2AZjsRihYf9XME246"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-md font-bold cursor-pointer hover:-translate-y-0.5 transition duration-200 text-center bg-gradient-to-b from-primary to-primary/80 text-primary-foreground px-5 py-3 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]"
             >
-              Join DevSphere on WhatsApp
+              Register Now
             </a>
           </div>
         </div>
