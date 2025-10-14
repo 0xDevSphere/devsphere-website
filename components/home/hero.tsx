@@ -72,7 +72,7 @@ export default function Hero() {
 
               {/* Get started button */}
               <div className="flex items-center justify-center">
-                <a href="https://chat.whatsapp.com/Fhvp7ZQvdHo4sdIr1GglAY" target="_blank" rel="noopener noreferrer">
+                <a href="https://forms.gle/2AZjsRihYf9XME246" target="_blank" rel="noopener noreferrer">
                   <div className="group cursor-pointer border border-border bg-card gap-2 h-[52px] flex items-center p-[8px] rounded-full">
                     <div className="border border-border bg-primary h-[36px] rounded-full flex items-center justify-center text-primary-foreground">
                       <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-sm sm:text-base">

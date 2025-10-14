@@ -17,7 +17,7 @@ const pricingPlans = [
   {
     name: "Apprenticeship",
     price: "Free",
-    description: "Structured learning track with guided practice and project exposure (coming soon)",
+    description: "Structured learning track with guided practice and project exposure",
     features: [
       "All Explorer benefits",
       "Open source projects",
@@ -27,8 +27,7 @@ const pricingPlans = [
       "Certificate of contribution",
     ],
     popular: false,
-    disabled: true,
-    cta: "Coming Soon",
+    cta: "Apply Now",
   },
   {
     name: "Core Team",
@@ -135,7 +134,7 @@ export function PricingSection() {
                 </Link>
               ) : plan.name === "Explorer" ? (
                 <motion.a
-                  href="https://chat.whatsapp.com/Fhvp7ZQvdHo4sdIr1GglAY"
+                  href="https://forms.gle/2AZjsRihYf9XME246"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
@@ -148,22 +147,21 @@ export function PricingSection() {
                 >
                   {plan.cta}
                 </motion.a>
-              ) : (
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  disabled={Boolean((plan as any).disabled)}
-                  className={`mt-auto w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
-                    plan.popular
-                      ? "bg-gradient-to-r from-[#e78a53] to-[#e78a53]/80 text-white shadow-lg shadow-[#e78a53]/25 hover:shadow-[#e78a53]/40"
-                      : ((plan as any).disabled
-                          ? "bg-white/10 text-white/70 border border-white/15 cursor-not-allowed"
-                          : "bg-white/10 text-white border border-white/20 hover:bg-white/20")
-                  }`}
-                >
-                  {plan.cta}
-                </motion.button>
-              )}
+              ) : plan.name === "Apprenticeship" ? (
+                <Link href="/apprenticeship" className="mt-auto block w-full">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-[#e78a53] to-[#e78a53]/80 text-white shadow-lg shadow-[#e78a53]/25 hover:shadow-[#e78a53]/40"
+                        : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                    }`}
+                  >
+                    {plan.cta}
+                  </motion.button>
+                </Link>
+              ) : null}
             </motion.div>
           ))}
         </div>

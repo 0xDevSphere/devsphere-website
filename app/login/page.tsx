@@ -131,7 +131,7 @@ export default function LoginPage() {
           <div className="mt-6 text-center">
             <p className="text-zinc-400">
               Don't have an account?{" "}
-              <Link href="https://chat.whatsapp.com/Fhvp7ZQvdHo4sdIr1GglAY" target="_blank" rel="noopener noreferrer" className="text-[#e78a53] hover:text-[#e78a53]/80 font-medium">
+              <Link href="https://forms.gle/2AZjsRihYf9XME246" target="_blank" rel="noopener noreferrer" className="text-[#e78a53] hover:text-[#e78a53]/80 font-medium">
                 Join DevSphere
               </Link>
             </p>
