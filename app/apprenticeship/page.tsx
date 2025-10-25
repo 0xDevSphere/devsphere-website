@@ -1,14 +1,4 @@
 import Link from "next/link"
-import {
-  AlertDialog,
-  AlertDialogTrigger,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogAction,
-} from "@/components/ui/alert-dialog"
 
 export default function ApprenticeshipPage() {
   return (
@@ -136,22 +126,14 @@ export default function ApprenticeshipPage() {
             <h3 className="font-medium mb-1">How to Apply</h3>
             <p className="text-white/70 text-sm">Fill out the Apprenticeship Recruitment Form. Tell us about your skills, your interests, and what drives you. You only need curiosity, honesty, and commitment.</p>
           </div>
-          <AlertDialog>
-            <AlertDialogTrigger className="inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium border border-white/15 bg-[#e78a53] text-white hover:opacity-90 transition-colors">
-              Apply
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Coming soon</AlertDialogTitle>
-                <AlertDialogDescription>
-                  Applications are not open yet. Check back here soon or follow our updates.
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogAction>Okay</AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <a
+            href="https://forms.gle/4Hq9kaw7LiDNEE9D6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium border border-white/15 bg-[#e78a53] text-white hover:opacity-90 transition-colors"
+          >
+            Apply
+          </a>
         </div>
 
         <p className="text-center text-white/60 text-sm">The journey begins the moment you decide to start.</p>
