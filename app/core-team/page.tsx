@@ -131,6 +131,11 @@ const ADVISORS: TeamMember[] = [
       instagram: "https://instagram.com/0xtaufeeq",
     },
   },
+  {
+    name: "Sristi",
+    role: "Marketing Advisor",
+    imageSrc: "/sristi.jpg",
+  },
   { name: "Sagar N Rao", role: "Design Advisor", imageSrc: "/Sagar.jpg" },
   {
     name: "Sushanth Harsha",
