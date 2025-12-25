@@ -132,7 +132,7 @@ const ADVISORS: TeamMember[] = [
     },
   },
   {
-    name: "Sristi",
+    name: "Sristi Losalka",
     role: "Marketing Advisor",
     imageSrc: "/sristi.jpg",
   },
