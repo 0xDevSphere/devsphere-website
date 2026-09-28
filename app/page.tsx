@@ -1,9 +1,9 @@
 "use client"
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import Hero from "@/components/home/hero"
+import Hero from "@/components/sections/hero"
 import dynamic from "next/dynamic"
-const Features = dynamic(() => import("@/components/features"), {
+const Features = dynamic(() => import("@/components/sections/features"), {
   ssr: false,
   loading: () => (
     <section className="relative py-12 sm:py-24 md:py-32">
@@ -13,13 +13,13 @@ const Features = dynamic(() => import("@/components/features"), {
     </section>
   ),
 })
-import { TestimonialsSection } from "@/components/testimonials"
-import { NewReleasePromo } from "@/components/new-release-promo"
-import { FAQSection } from "@/components/faq-section"
-import { PricingSection } from "@/components/pricing-section"
-import { StickyFooter } from "@/components/sticky-footer"
-import { Navbar } from "@/components/navbar"
-import ScamAlertBanner from "@/components/scam-alert-banner"
+import { TestimonialsSection } from "@/components/sections/testimonials"
+import { NewReleasePromo } from "@/components/sections/new-release-promo"
+import { FAQSection } from "@/components/sections/faq-section"
+import { PricingSection } from "@/components/sections/pricing-section"
+import { StickyFooter } from "@/components/layout/sticky-footer"
+import { Navbar } from "@/components/layout/navbar"
+import ScamAlertBanner from "@/components/layout/scam-alert-banner"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)

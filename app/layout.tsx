@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
-import { LoadingOverlay } from "@/components/loading-overlay"
+import { LoadingOverlay } from "@/components/layout/loading-overlay"
 
 export const metadata: Metadata = {
   title: {
@@ -87,9 +87,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/devsphereLogo.png",
-    shortcut: "/devsphereLogo.png",
-    apple: "/devsphereLogo.png",
+    icon: "/brand/devsphereLogo.png",
+    shortcut: "/brand/devsphereLogo.png",
+    apple: "/brand/devsphereLogo.png",
   },
   manifest: "/site.webmanifest",
 }

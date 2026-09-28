@@ -131,7 +131,7 @@ export default function Hero() {
                 {/* Microsoft Logo */}
                 <div className="hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all duration-300">
                   <Image
-                    src="/Microsoft-Logo-White.webp"
+                    src="/brand/Microsoft-Logo-White.webp"
                     alt="Microsoft"
                     width={120}
                     height={48}

@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { StickyFooter } from "@/components/sticky-footer"
-import { Navbar } from "@/components/navbar"
+import { StickyFooter } from "@/components/layout/sticky-footer"
+import { Navbar } from "@/components/layout/navbar"
 
 type TeamMember = {
   name: string
@@ -21,12 +21,12 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Amith Emmanuel",
     role: "President",
-    imageSrc: "/amith.webp",
+    imageSrc: "/team/amith.webp",
   },
   {
     name: "Harshul Kala",
     role: "Tech Lead",
-    imageSrc: "/harshul.webp",
+    imageSrc: "/team/harshul.webp",
     socials: {
       linkedin: "https://www.linkedin.com/in/haru-l41n-pr0t0",
       github: "https://github.com/Wired-Navi0x17",
@@ -35,7 +35,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "N Priyanka",
     role: "Secretary",
-    imageSrc: "/priyanka.webp",
+    imageSrc: "/team/priyanka.webp",
     socials: {
       linkedin: "https://www.linkedin.com/in/priyanka-nagaraj-143033378?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
@@ -43,12 +43,12 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Maziha Athaullah",
     role: "Public Relations",
-    imageSrc: "/maziha.webp",
+    imageSrc: "/team/maziha.webp",
   },
   {
     name: "Rabiya",
     role: "Core Team",
-    imageSrc: "/rabiya.webp",
+    imageSrc: "/team/rabiya.webp",
   },
 ]
 
@@ -56,7 +56,7 @@ const ADVISORS: TeamMember[] = [
   {
     name: "Dr. Merin Thomas",
     role: "Faculty Advisor",
-    imageSrc: "/ProfMerin.webp",
+    imageSrc: "/team/ProfMerin.webp",
     socials: {
       linkedin: "https://www.linkedin.com/in/dr-merin-thomas/",
     },
@@ -64,7 +64,7 @@ const ADVISORS: TeamMember[] = [
   {
     name: "Taufeeq Riyaz",
     role: "Founder and Advisor",
-    imageSrc: "/Taufeeq.webp",
+    imageSrc: "/team/Taufeeq.webp",
     socials: {
       linkedin: "https://linkedin.com/in/taufeeq",
       github: "https://github.com/0xtaufeeq",
@@ -75,7 +75,7 @@ const ADVISORS: TeamMember[] = [
   {
     name: "Samarth Kadam",
     role: "Advisor",
-    imageSrc: "/sam.webp",
+    imageSrc: "/team/sam.webp",
     socials: {
       linkedin: "https://www.linkedin.com/in/samarth-kadam-008563331/",
       github: "https://github.com/IamSamk",
@@ -84,7 +84,7 @@ const ADVISORS: TeamMember[] = [
   {
     name: "Ritam Rao",
     role: "Advisor",
-    imageSrc: "/ritam.webp",
+    imageSrc: "/team/ritam.webp",
     socials: {
       linkedin: "https://www.linkedin.com/in/ritam-rao-86503a2b6",
       github: "https://github.com/RitamRoa",
@@ -94,7 +94,7 @@ const ADVISORS: TeamMember[] = [
   {
     name: "Yashas",
     role: "Advisor",
-    imageSrc: "/placeholder.svg",
+    imageSrc: "/placeholders/placeholder.svg",
   },
 ]
 
