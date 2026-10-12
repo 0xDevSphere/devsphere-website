@@ -94,7 +94,7 @@ const ADVISORS: TeamMember[] = [
   {
     name: "Yashas",
     role: "Advisor",
-    imageSrc: "/placeholders/placeholder.svg",
+    imageSrc: "/team/yashas.webp",
   },
 ]
 
@@ -171,14 +171,14 @@ export default function CoreTeamPage() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {ADVISORS.map((member) => (
-            <div key={member.name} className="rounded-2xl border border-border bg-card/40 backdrop-blur-sm p-4">
+            <div key={member.name} className="group rounded-2xl border border-border bg-card/40 backdrop-blur-sm p-4 transition-transform duration-200 hover:-translate-y-0.5">
               <div className="relative w-full aspect-square overflow-hidden rounded-xl border border-border">
                 <Image
                   src={member.imageSrc}
                   alt={member.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="mt-4">

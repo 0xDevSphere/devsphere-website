@@ -127,18 +127,83 @@ export default function Hero() {
           >
             <div className="text-center">
               <p className="text-sm text-muted-foreground mb-6">Brands We Worked With</p>
-              <div className="flex items-center justify-center gap-8">
-                {/* Microsoft Logo */}
-                <div className="hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all duration-300">
+              <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10 md:gap-14 max-w-5xl mx-auto px-4">
+                {/* Microsoft */}
+                <div className="opacity-80 hover:opacity-100 transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]">
                   <Image
                     src="/brand/Microsoft-Logo-White.webp"
                     alt="Microsoft"
-                    width={120}
-                    height={48}
-                    sizes="(max-width: 768px) 96px, 120px"
+                    width={140}
+                    height={50}
+                    sizes="(max-width: 768px) 110px, 140px"
                     priority={false}
                     loading="lazy"
-                    style={{ height: "auto" }}
+                    className="h-8 sm:h-9 md:h-10 w-auto object-contain"
+                  />
+                </div>
+                {/* GitHub */}
+                <div className="opacity-80 hover:opacity-100 transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]">
+                  <Image
+                    src="/brand/github.svg"
+                    alt="GitHub"
+                    width={130}
+                    height={44}
+                    sizes="(max-width: 768px) 105px, 130px"
+                    priority={false}
+                    loading="lazy"
+                    className="h-8 sm:h-9 md:h-10 w-auto object-contain"
+                  />
+                </div>
+                {/* Google for Developers */}
+                <div className="opacity-80 hover:opacity-100 transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]">
+                  <Image
+                    src="/brand/google-developers.svg"
+                    alt="Google for Developers"
+                    width={220}
+                    height={44}
+                    sizes="(max-width: 768px) 180px, 220px"
+                    priority={false}
+                    loading="lazy"
+                    className="h-6 sm:h-7 md:h-8 w-auto object-contain"
+                  />
+                </div>
+                {/* Databricks */}
+                <div className="opacity-80 hover:opacity-100 transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]">
+                  <Image
+                    src="/brand/databricks.svg"
+                    alt="Databricks"
+                    width={140}
+                    height={44}
+                    sizes="(max-width: 768px) 115px, 140px"
+                    priority={false}
+                    loading="lazy"
+                    className="h-8 sm:h-9 md:h-10 w-auto object-contain"
+                  />
+                </div>
+                {/* DigitalOcean */}
+                <div className="opacity-80 hover:opacity-100 transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]">
+                  <Image
+                    src="/brand/digitalocean.svg"
+                    alt="DigitalOcean"
+                    width={135}
+                    height={46}
+                    sizes="(max-width: 768px) 110px, 135px"
+                    priority={false}
+                    loading="lazy"
+                    className="h-8 sm:h-9 md:h-10 w-auto object-contain"
+                  />
+                </div>
+                {/* MLH */}
+                <div className="opacity-80 hover:opacity-100 transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]">
+                  <Image
+                    src="/brand/mlh.svg"
+                    alt="Major League Hacking"
+                    width={110}
+                    height={46}
+                    sizes="(max-width: 768px) 90px, 110px"
+                    priority={false}
+                    loading="lazy"
+                    className="h-9 sm:h-10 md:h-11 w-auto object-contain"
                   />
                 </div>
               </div>
