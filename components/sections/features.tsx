@@ -4,9 +4,9 @@ import type React from "react"
 
 import { useTheme } from "next-themes"
 import dynamic from "next/dynamic"
-const Earth = dynamic(() => import("./ui/globe"), { ssr: false })
-import ScrambleHover from "./ui/scramble"
-import { FollowerPointerCard } from "./ui/following-pointer"
+const Earth = dynamic(() => import("@/components/ui/globe"), { ssr: false })
+import ScrambleHover from "@/components/ui/scramble"
+import { FollowerPointerCard } from "@/components/ui/following-pointer"
 import { motion, useInView } from "framer-motion"
 import { Suspense, useEffect, useRef, useState } from "react"
 import { geist } from "@/lib/fonts"
@@ -255,7 +255,7 @@ export default function Features() {
                           whileHover={{ scale: 1.1, rotate: 5 }}
                         >
                         <Image
-                          src="/devsphere.svg"
+                          src="/brand/devsphere.svg"
                           alt="DevSphere"
                           width={64}
                           height={64}
@@ -521,7 +521,7 @@ export default function Features() {
                 <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
                   <div className="relative w-full max-w-sm">
                     <Image
-                      src="/mentorship.jpg"
+                      src="/content/mentorship.jpg"
                       alt="Mentorship Programs"
                       width={640}
                       height={480}

@@ -28,4 +28,5 @@ yarn-error.log*
 next-env.d.ts
 
 # archive
+/public/archive/
 /public/Old core team, advisor/

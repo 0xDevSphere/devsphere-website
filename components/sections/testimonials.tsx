@@ -7,49 +7,49 @@ const testimonials = [
     name: "S MD Adil Ahmed",
     username: "BTech 2028",
     body: "DevSphere is a great place to learn and grow. The community is very supportive and helps you build skills through real projects and teamwork.",
-    img: "/Testimonials/adil.jpg",
+    img: "/testimonials/adil.jpg",
   },
   {
     name: "Busetty Sugnesh",
     username: "BTech 2028",
     body: "DevSphere was where I first explored open source in a real way. More than just coding, it gave me a community to learn, share, and grow with.",
-    img: "/Testimonials/busetty.jpg",
+    img: "/testimonials/busetty.jpg",
   },
   {
     name: "Rabiya Basri",
     username: "BTech 2028",
     body: "DevSphere is a great place to start your journey. Beginners get the right guidance and support, and the community helps you learn by doing real projects. Everyone here is friendly and ready to help, which makes it easier to grow and improve your skills.",
-    img: "/Testimonials/rabiya.jpg",
+    img: "/testimonials/rabiya.jpg",
   },
   {
     name: "Pruthvi Krishna N.G.",
     username: "BTech 2029",
     body: "DevSphere has become one of my favorite clubs. I like how the admins help each other, and the webinars they conduct are amazing and helpful.",
-    img: "/Testimonials/pruthvi.jpg",
+    img: "/testimonials/pruthvi.jpg",
   },
   {
     name: "Harshitha CM",
     username: "BCA 2029",
     body: "Attending the workshop was really helpful—I learned about Perplexity and its uses. The live examples made it even more interesting. It's a good platform to learn something new.",
-    img: "/harshitha.jpg",
+    img: "/testimonials/harshitha.jpg",
   },
   {
     name: "Mahaveer Vaishnav",
     username: "BSc 2028",
     body: "Joining DevSphere immediately put me on a path to explore the tech field, and the vibrant community truly sets it apart. Being in touch with superb seniors—and learning and growing through their guidance—is the club's biggest asset. I look forward to more cutting-edge events and workshops as we keep exploring new technologies.",
-    img: "/mahaveer.jpg",
+    img: "/testimonials/mahaveer.jpg",
   },
   {
     name: "Amith Emmanuel",
     username: "BCA 2029",
     body: "DevSphere has been an incredible platform for me to deepen my understanding of technology and collaborate with like‑minded peers. The club doesn’t just focus on coding—it fosters a culture of learning, innovation, and teamwork. My experience here has strengthened my skills and confidence, and I’m excited to contribute to real‑world projects.",
-    img: "/Testimonials/amith.jpg",
+    img: "/testimonials/amith.jpg",
   },
   {
     name: "Sree Govinth N",
     username: "BTech 2027",
     body: "DevSphere embodies the idea of surrounding yourself with people who push you to be better. Every idea gets support and the right opportunities. It’s the best club and community—always standing out because they trust your ability and help you excel.",
-    img: "/sree.jpg",
+    img: "/testimonials/sree.jpg",
   },
 ]
 
@@ -87,7 +87,7 @@ const TestimonialCard = ({
 
       <div className="mt-5 flex items-center gap-2">
         <img
-          src={img || "/placeholder-user.jpg"}
+          src={img || "/placeholders/placeholder-user.jpg"}
           alt={name}
           height="40"
           width="40"
@@ -108,9 +108,9 @@ const TestimonialCard = ({
               }
             }
             // Fallback to placeholder
-            if (!target.src.endsWith("/placeholder-user.jpg")) {
+            if (!target.src.endsWith("/placeholders/placeholder-user.jpg")) {
               target.setAttribute("data-attempt", "placeholder")
-              target.src = "/placeholder-user.jpg"
+              target.src = "/placeholders/placeholder-user.jpg"
             }
           }}
         />

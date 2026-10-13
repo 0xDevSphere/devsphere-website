@@ -47,7 +47,7 @@ export function Navbar() {
           className={`z-50 flex items-center gap-2 transition-all duration-300 cursor-pointer ${isScrolled ? "ml-4" : ""}`}
           aria-label="Go home"
         >
-          <Image src="/devsphereLogo.png" alt="DevSphere Logo" width={24} height={24} sizes="24px" className="rounded-full" />
+          <Image src="/brand/devsphereLogo.png" alt="DevSphere Logo" width={24} height={24} sizes="24px" className="rounded-full" />
           <span className="text-lg font-semibold text-foreground">DevSphere</span>
         </Link>
 
@@ -125,7 +125,7 @@ export function Navbar() {
       {/* Mobile Header */}
       <header className="sticky top-4 z-[9999] mx-4 flex w-auto flex-row items-center justify-between rounded-full bg-background/80 backdrop-blur-sm border border-border/50 shadow-lg md:hidden px-4 py-3">
         <Link href="/" onClick={scrollToTop} className="flex items-center gap-2 cursor-pointer" aria-label="Go home">
-          <Image src="/devsphereLogo.png" alt="DevSphere Logo" width={24} height={24} sizes="24px" className="rounded-full" />
+          <Image src="/brand/devsphereLogo.png" alt="DevSphere Logo" width={24} height={24} sizes="24px" className="rounded-full" />
           <span className="text-base font-semibold text-foreground">DevSphere</span>
         </Link>
 

@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion"
 import { FormEvent, KeyboardEvent, useMemo, useState } from "react"
-import { JoinConfetti } from "@/components/join-confetti"
+import { JoinConfetti } from "@/components/shared/join-confetti"
 import { joinApplicationSchema, type JoinApplicationInput } from "@/lib/join-application-schema"
 
 type StepField = {
